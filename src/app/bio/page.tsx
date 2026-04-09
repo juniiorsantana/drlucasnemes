@@ -42,7 +42,7 @@ const links = [
   },
   {
     id: "site",
-    label: "Acesse o Site",
+    label: "Acesse o Site", //* MUDAR PARA: "Acesse o Site"//
     sublabel: "Conheça todas as especialidades",
     href: SITE_URL,
     icon: "open_in_new",
