@@ -98,8 +98,8 @@ export default function BioPage() {
               <Image 
                 src="/agende.png" 
                 alt="Agendar" 
-                width={32} 
-                height={32} 
+                width={50} 
+                height={50} 
                 className="object-contain"
               />
             </div>
@@ -120,8 +120,8 @@ export default function BioPage() {
             <Image 
               src="/renderizacao-3d-do-icone-da-interface-do-usuario.png" 
               alt="Site" 
-              width={24} 
-              height={24} 
+              width={40} 
+              height={40} 
               className="object-contain"
             />
             <div>
@@ -140,8 +140,8 @@ export default function BioPage() {
             <Image 
               src="/insta.png" 
               alt="Instagram" 
-              width={24} 
-              height={24} 
+              width={40} 
+              height={40} 
               className="object-contain"
             />
             <div>
@@ -160,8 +160,8 @@ export default function BioPage() {
             <Image 
               src="/mapa.png" 
               alt="Maps" 
-              width={24} 
-              height={24} 
+              width={40} 
+              height={40} 
               className="object-contain"
             />
             <div>
