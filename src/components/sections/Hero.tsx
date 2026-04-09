@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Background (imagem sem overlay) */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bg-secao-hero.avif"
+          src="/bg-secao-hero2.avif"
           alt="Background seção hero"
           fill
           priority

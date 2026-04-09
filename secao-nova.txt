@@ -1,0 +1,102 @@
+## Seção: Tecnologia e Precisão Clínica
+
+### Objetivo
+Criar uma seção premium em formato **bento grid**, com animações suaves, destacando tecnologias avançadas de avaliação corporal e metabólica. A estética deve transmitir **ciência, precisão e alto valor percebido**.
+
+---
+
+### Grid Layout (Bento)
+
+#### Card 1 (Grande - destaque principal)
+**Título:** Bioimpedância Avançada  
+**Descrição:**  
+Análise completa da sua composição corporal em segundos.  
+Identifique percentual de gordura, massa muscular, retenção de líquido e muito mais com precisão clínica.  
+
+**Destaque:** Dados rápidos e acionáveis  
+**Estilo:** Card grande, com animação de entrada suave + leve efeito hover (scale + glow)
+
+---
+
+#### Card 2
+**Título:** Calorimetria Indireta  
+**Descrição:**  
+Descubra exatamente quantas calorias seu corpo gasta em repouso.  
+Pare de seguir estimativas e tenha um plano alimentar realmente personalizado.  
+
+**Destaque:** Metabolismo real, não estimado  
+
+---
+
+#### Card 3
+**Título:** Exame DEXA  
+**Descrição:**  
+O método mais preciso do mundo para análise corporal.  
+Mapeamento detalhado de gordura, massa magra e densidade óssea.  
+
+**Destaque:** Padrão ouro em avaliação corporal  
+
+---
+
+#### Card 4 (Horizontal ou destaque secundário)
+**Título:** Biologix Performance  
+**Descrição:**  
+Tecnologia avançada para análise profunda do seu funcionamento metabólico e hormonal.  
+Uma visão completa para otimizar sua saúde e performance.  
+
+**Destaque:** Alta performance baseada em dados  
+
+---
+
+### Diretrizes de UI/UX
+
+- Layout estilo **bento grid moderno (Apple / Notion style)**
+- Espaçamento generoso (respiro premium)
+- Bordas arredondadas (2xl ou mais)
+- Sombras suaves (não pesadas)
+- Fundo: claro ou levemente acinzentado com gradientes sutis
+
+---
+
+### Animações
+
+- Entrada com fade + translateY
+- Hover com:
+  - scale leve (1.02–1.05)
+  - brilho sutil (glow ou border highlight)
+- Microinterações suaves (sem exagero)
+
+---
+
+### Responsividade
+
+- Desktop: grid 2x2 ou 3 colunas com variação de tamanho
+- Tablet: 2 colunas
+- Mobile: 1 coluna (cards empilhados)
+
+---
+
+### Tom da Copy
+
+- Linguagem simples, porém sofisticada
+- Foco em:
+  - precisão
+  - tecnologia
+  - personalização
+  - autoridade
+
+---
+
+### Extra (opcional)
+
+Adicionar pequenos elementos visuais dentro dos cards:
+- gráficos minimalistas
+- ícones finos (outline)
+- números ou métricas (ex: % gordura, kcal, etc)
+
+---
+
+### Sensação final da seção
+
+O usuário deve pensar:  
+**"Isso aqui não é uma consulta comum. É um nível acima."**

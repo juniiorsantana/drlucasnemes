@@ -5,25 +5,23 @@ import { useRef } from "react";
 const CARDS = [
   {
     id: 1,
-    title: "Avaliação Clínica Inteligente",
+    title: "Calorimetria indireta",
     description:
-      "Análise completa do seu histórico, sinais e sintomas para entender o que realmente está por trás do seu metabolismo.",
-    image:
-      "https://images.unsplash.com/photo-1580281657527-47f249e8f4df?q=80&w=1200",
+      "Descobrimos quantas calorias seu corpo realmente consome em repouso. Sem achismo — seu plano é baseado no seu metabolismo real.",
+    image: "/Calorimetria.avif",
   },
   {
     id: 2,
     title: "Bioimpedância Avançada",
     description:
-      "Mapeamento detalhado da sua composição corporal, identificando gordura, massa muscular e retenção com precisão.",
-    image:
-      "https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=1200",
+      "Mapeamos em detalhes sua composição corporal — gordura, massa magra e retenção de líquidos — para entender exatamente o que está impedindo seu resultado.",
+    image: "/bioimpedancia.avif",
   },
   {
     id: 3,
     title: "Exame DEXA",
     description:
-      "Tecnologia padrão ouro para análise corporal. Mede com extrema precisão gordura, massa magra e densidade óssea.",
+      "O exame mais preciso do mundo para análise corporal. Identificamos com exatidão onde está a gordura, a massa muscular e possíveis desequilíbrios.",
     image:
       "https://images.unsplash.com/photo-1581595219315-a187dd40c322?q=80&w=1200",
     highlight: true,
@@ -31,11 +29,10 @@ const CARDS = [
   },
   {
     id: 4,
-    title: "Plano Personalizado de Precisão",
+    title: "Protocolo Biologix",
     description:
-      "Com base nos dados, criamos uma estratégia individual para acelerar seus resultados com segurança.",
-    image:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1200",
+      "Integramos todos os dados para criar um plano estratégico totalmente personalizado, focado em corrigir a raiz do problema e acelerar seus resultados.",
+    image: "/biologix-em-cuiaba.avif",
   },
 ];
 

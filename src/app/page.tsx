@@ -5,6 +5,7 @@ import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Technology from "@/components/sections/Technology";
+import Methodology from "@/components/sections/Methodology";
 import Clinic from "@/components/sections/Clinic";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -53,6 +54,7 @@ export default function Home() {
         <About />
         <HowItWorks />
         <Technology />
+        <Methodology />
         <Clinic />
         <FAQ />
         <FinalCTA />

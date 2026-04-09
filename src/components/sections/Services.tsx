@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import { WHATSAPP_URL } from "@/lib/constants";
+import Image from "next/image";
 
 interface CardData {
   id: number;
   title: string;
   subtitle: string;
   description: string;
-  imageBg: string;
+  imageUrl: string;
 }
 
 const CARDS: CardData[] = [
@@ -18,7 +19,7 @@ const CARDS: CardData[] = [
     subtitle: "Abordagem simples e eficiente para resultados duradouros",
     description:
       "Protocolos personalizados baseados no seu metabolismo real. Vamos além da balança — analisamos composição corporal, hormônios e hábitos para garantir resultados que duram.",
-    imageBg: "from-[#0D1B4B] to-[#1A3F8F]",
+    imageUrl: "/emagrecimento saudavel em cuiaba.avif",
   },
   {
     id: 2,
@@ -26,7 +27,7 @@ const CARDS: CardData[] = [
     subtitle: "Cuidamos do seu corpo e mente para uma vida melhor",
     description:
       "Tratamentos que equilibram energia, sono e saúde hormonal. Uma abordagem integrativa para você viver com mais qualidade, disposição e longevidade.",
-    imageBg: "from-[#1A3F8F] to-[#2563C2]",
+    imageUrl: "/bemestar.avif",
   },
   {
     id: 3,
@@ -34,7 +35,7 @@ const CARDS: CardData[] = [
     subtitle: "Máximo desempenho através da nutrição de precisão em Cuiabá-MT",
     description:
       "Estratégias nutricionais e metabólicas para atletas e profissionais que exigem o máximo do corpo. Mais força, recuperação acelerada e foco mental.",
-    imageBg: "from-[#2563C2] to-[#378ADD]",
+    imageUrl: "/alta-perfomance.avif",
   },
 ];
 
@@ -59,13 +60,14 @@ function FlipCard({ card }: { card: CardData }) {
           className="absolute inset-0 flex flex-col rounded-2xl overflow-hidden border border-outline-variant/20 shadow-editorial bg-surface-container-lowest"
           style={{ backfaceVisibility: "hidden" }}
         >
-          {/* Foto placeholder */}
-          <div
-            className={`relative h-40 bg-gradient-to-br ${card.imageBg} flex items-center justify-center flex-shrink-0`}
-          >
-            <span className="material-symbols-outlined text-white/20 text-[80px]">
-              person
-            </span>
+          {/* Foto real */}
+          <div className="relative h-40 bg-surface-container-high flex-shrink-0">
+            <Image
+              src={card.imageUrl}
+              alt={card.title}
+              fill
+              className="object-cover"
+            />
             <div className="absolute inset-0 bg-black/10" />
           </div>
 
