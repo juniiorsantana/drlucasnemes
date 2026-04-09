@@ -15,7 +15,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Physician",
   name: DOCTOR_NAME,
-  image: `${SITE_URL}/Quem sou.avif`,
+  image: `${SITE_URL}/dr-lucas-nemes-og.avif`,
   description:
     "Médico Nutrólogo especialista em emagrecimento, reposição hormonal e performance",
   medicalSpecialty: "Nutrologia",

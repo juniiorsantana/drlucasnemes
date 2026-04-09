@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/Quem sou.avif",
+        url: `${SITE_URL}/dr-lucas-nemes-og.avif`,
         width: 1200,
         height: 630,
         alt: "Dr. Lucas Nemes - Nutrologia em Cuiabá",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     description:
       "Médico Nutrólogo especialista em emagrecimento, reposição hormonal e performance em Cuiabá-MT.",
     creator: "@drlucasnemes",
-    images: ["/Quem sou.avif"],
+    images: [`${SITE_URL}/dr-lucas-nemes-og.avif`],
   },
   icons: {
     icon: "/favicon.ico",
