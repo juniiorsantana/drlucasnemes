@@ -13,6 +13,7 @@ import {
   NAV_LINKS,
   SOCIAL_LINKS,
 } from "@/lib/constants";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -21,9 +22,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
           {/* Col 1: Identity */}
           <div className="space-y-2">
-            <div className="text-2xl font-headline font-extrabold tracking-tight uppercase">
-              LN {DOCTOR_NAME}
-            </div>
+            <Image
+              src="/Logo-light.png"
+              alt="Dr. Lucas Nemes"
+              width={72}
+              height={24}
+              className="h-6 w-auto object-contain mb-4"
+            />
             <p className="text-on-primary-container text-sm">{DOCTOR_SPECIALTY}</p>
             <p className="text-on-primary-container text-xs">
               {CRM} · {RQE}

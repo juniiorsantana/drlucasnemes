@@ -7,10 +7,10 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-end overflow-hidden">
+    <section className="relative min-h-screen lg:min-h-screen flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-end overflow-hidden bg-background">
 
-      {/* Background (imagem sem overlay) */}
-      <div className="absolute inset-0 z-0">
+      {/* Background (imagem sem overlay) - Desktop Only */}
+      <div className="absolute inset-0 z-0 hidden lg:block">
         <Image
           src="/bg-secao-hero2.avif"
           alt="Background seção hero"
@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
 
       {/* Conteúdo */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-40 pt-40">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-10 lg:pb-40 pt-32 lg:pt-40 flex flex-col lg:block items-center text-center lg:text-left">
         <div className="max-w-2xl space-y-6 animate-fade-up">
 
           <SectionLabel>
@@ -39,11 +39,12 @@ export default function Hero() {
             Reposição Hormonal e Performance
           </h2>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
             <Button
               href={WHATSAPP_URL}
               variant="primary"
               size="lg"
+              className="w-full sm:w-auto"
               icon={
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -56,7 +57,19 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Credenciais */}
+        {/* Foto Mobile - Visible only on mobile */}
+        <div className="relative w-full mt-12 lg:hidden">
+          <Image
+            src="/bg-mobile.avif"
+            alt="Dr. Lucas Nemes"
+            width={600}
+            height={800}
+            priority
+            className="w-full h-auto object-contain"
+          />
+        </div>
+
+        {/* Credenciais - Desktop Only */}
         <div className="absolute bottom-20 right-8 hidden lg:flex flex-col items-end gap-1">
           <p className="text-on-surface-variant/80 text-xs font-label tracking-widest uppercase">
             Credenciais

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { NAV_LINKS, WHATSAPP_URL, CRM } from "@/lib/constants";
 import Button from "@/components/ui/Button";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,9 +24,14 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
         <div className="flex items-center gap-2">
-          <span className="text-xl font-headline font-extrabold tracking-tight text-primary uppercase">
-            LN {/* Dr. Lucas Nemes */}
-          </span>
+          <Image
+            src="/logo-azul.png"
+            alt="Dr. Lucas Nemes"
+            width={72}
+            height={24}
+            className="h-6 w-auto object-contain"
+            priority
+          />
         </div>
 
         <div className="hidden md:flex items-center gap-8 font-headline font-bold text-sm tracking-tight">
