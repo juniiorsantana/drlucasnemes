@@ -29,58 +29,6 @@ const MAPS_URL =
 const WAZE_URL =
   "https://waze.com/ul?q=R.+das+Beg%C3%B4nias,+615,+Jardim+Cuiab%C3%A1,+Cuiab%C3%A1,+MT&navigate=yes";
 const INSTAGRAM_URL = "https://instagram.com/drlucasnemes";
-const YOUTUBE_URL = "https://youtube.com/@drlucasnemes";
-
-const links = [
-  {
-    id: "agendar",
-    label: "Agendar Consulta",
-    sublabel: "Resposta rápida via WhatsApp",
-    href: WHATSAPP_URL,
-    icon: "chat",
-    variant: "whatsapp" as const,
-  },
-  {
-    id: "site",
-    label: "Acesse o Site", //* MUDAR PARA: "Acesse o Site"//
-    sublabel: "Conheça todas as especialidades",
-    href: SITE_URL,
-    icon: "open_in_new",
-    variant: "primary" as const,
-  },
-  {
-    id: "instagram",
-    label: "Instagram",
-    sublabel: "@drlucasnemes",
-    href: INSTAGRAM_URL,
-    icon: "photo_camera",
-    variant: "social" as const,
-  },
-  {
-    id: "youtube",
-    label: "YouTube",
-    sublabel: "Conteúdo sobre saúde e nutrologia",
-    href: YOUTUBE_URL,
-    icon: "play_circle",
-    variant: "social" as const,
-  },
-  {
-    id: "maps",
-    label: "Ver no Google Maps",
-    sublabel: `${CLINIC_ADDRESS}, ${CLINIC_CITY}-${CLINIC_STATE}`,
-    href: MAPS_URL,
-    icon: "location_on",
-    variant: "map" as const,
-  },
-  {
-    id: "waze",
-    label: "Abrir no Waze",
-    sublabel: "Traçar rota até a clínica",
-    href: WAZE_URL,
-    icon: "navigation",
-    variant: "map" as const,
-  },
-];
 
 const specialties = [
   "Emagrecimento Saudável",
@@ -90,166 +38,168 @@ const specialties = [
   "Nutrologia Clínica",
 ];
 
-const variantStyles: Record<string, string> = {
-  whatsapp: [
-    "bg-[#25D366] text-white",
-    "shadow-[0_6px_24px_rgba(37,211,102,0.35)]",
-    "hover:shadow-[0_10px_36px_rgba(37,211,102,0.55)]",
-    "hover:-translate-y-0.5",
-  ].join(" "),
-  primary: [
-    "bg-gradient-to-r from-[#164ea3] to-[#2563C2] text-white",
-    "shadow-[0_6px_24px_rgba(22,78,163,0.3)]",
-    "hover:shadow-[0_10px_36px_rgba(22,78,163,0.5)]",
-    "hover:-translate-y-0.5",
-  ].join(" "),
-  social: [
-    "bg-white text-[#0D1B4B] border border-[#CBD5E0]",
-    "hover:border-[#164ea3] hover:text-[#164ea3]",
-    "shadow-sm hover:shadow-md hover:-translate-y-0.5",
-  ].join(" "),
-  map: [
-    "bg-[#F0F3F7] text-[#0D1B4B] border border-[#CBD5E0]",
-    "hover:border-[#164ea3] hover:bg-white",
-    "shadow-sm hover:shadow-md hover:-translate-y-0.5",
-  ].join(" "),
-};
-
 export default function BioPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#0D1B4B] via-[#1A3F8F] to-[#0D1B4B] flex flex-col items-center px-4 py-10 pb-16">
-      {/* Background subtle pattern */}
-      <div
-        className="pointer-events-none fixed inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 50% 0%, #7FA8D4 0%, transparent 60%)",
-        }}
-      />
-
-      <div className="relative z-10 w-full max-w-sm flex flex-col items-center gap-6">
+    <main className="min-h-screen bg-[#F0F3F7] flex flex-col items-center px-4 py-10 pb-16">
+      <div className="w-full max-w-sm flex flex-col items-center gap-5">
 
         {/* ── Avatar ────────────────────────────────────── */}
-        <div className="relative mt-4">
-          <div className="w-28 h-28 rounded-full overflow-hidden ring-4 ring-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+        <div className="relative mt-2">
+          <div className="w-24 h-24 rounded-full overflow-hidden ring-4 ring-white shadow-[0_8px_24px_rgba(13,27,75,0.15)]">
             <Image
               src="/dr-lucas-nemes-og.avif"
               alt={`Foto de ${DOCTOR_NAME}`}
-              width={112}
-              height={112}
+              width={96}
+              height={96}
               className="w-full h-full object-cover object-top"
               priority
             />
           </div>
-          {/* Online badge */}
-          <span className="absolute bottom-1 right-1 w-4 h-4 bg-[#25D366] rounded-full border-2 border-[#0D1B4B]" />
+          <span className="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 bg-[#25D366] rounded-full border-2 border-[#F0F3F7]" />
         </div>
 
         {/* ── Identity ──────────────────────────────────── */}
         <div className="text-center space-y-1">
           <h1
-            className="text-2xl font-extrabold text-white tracking-tight"
+            className="text-xl font-extrabold text-[#0D1B4B] tracking-tight"
             style={{ fontFamily: "var(--font-headline)" }}
           >
             {DOCTOR_NAME}
           </h1>
-          <p className="text-[#7FA8D4] font-medium text-sm">
-            {DOCTOR_SPECIALTY}
-          </p>
-          <p className="text-white/40 text-xs">
+          <p className="text-[#164ea3] font-medium text-sm">{DOCTOR_SPECIALTY}</p>
+          <p className="text-[#6B7280] text-xs">
             {CRM} &nbsp;·&nbsp; {RQE}
           </p>
         </div>
 
         {/* ── Specialty badges ──────────────────────────── */}
-        <div className="flex flex-wrap justify-center gap-2">
+        <div className="flex flex-wrap justify-center gap-1.5">
           {specialties.map((s) => (
             <span
               key={s}
-              className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs font-medium border border-white/10 backdrop-blur-sm"
+              className="px-2.5 py-1 rounded-full bg-white border border-[#CBD5E0] text-[#0D1B4B] text-xs font-medium"
             >
               {s}
             </span>
           ))}
         </div>
 
-        {/* ── Divider ───────────────────────────────────── */}
-        <div className="w-full h-px bg-white/10" />
+        {/* ── Bento Grid ────────────────────────────────── */}
+        <div className="w-full grid grid-cols-2 gap-3">
 
-        {/* ── Links ─────────────────────────────────────── */}
-        <div className="w-full flex flex-col gap-3">
-          {links.map((link) => (
-            <a
-              key={link.id}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={[
-                "w-full flex items-center gap-4 px-4 py-3.5 rounded-2xl",
-                "transition-all duration-200 active:scale-95 cursor-pointer",
-                variantStyles[link.variant],
-              ].join(" ")}
-            >
-              <span className="material-symbols-outlined text-[22px] shrink-0">
-                {link.icon}
-              </span>
-              <div className="flex-1 min-w-0">
-                <p className="font-semibold text-sm leading-tight">
-                  {link.label}
-                </p>
-                {link.sublabel && (
-                  <p className="text-xs opacity-70 truncate mt-0.5">
-                    {link.sublabel}
-                  </p>
-                )}
-              </div>
-              <span className="material-symbols-outlined text-base opacity-40 shrink-0">
-                chevron_right
-              </span>
-            </a>
-          ))}
+          {/* Agendar — destaque full-width */}
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="col-span-2 flex items-center gap-4 px-5 py-4 rounded-2xl bg-[#25D366] text-white shadow-[0_6px_24px_rgba(37,211,102,0.35)] hover:shadow-[0_10px_36px_rgba(37,211,102,0.5)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+          >
+            <span className="material-symbols-outlined text-2xl shrink-0">chat</span>
+            <div className="flex-1">
+              <p className="font-bold text-sm leading-tight">Agendar Consulta</p>
+              <p className="text-white/75 text-xs mt-0.5">Resposta rápida via WhatsApp</p>
+            </div>
+            <span className="material-symbols-outlined text-lg opacity-60 shrink-0">chevron_right</span>
+          </a>
+
+          {/* Site — meia largura */}
+          <a
+            href={SITE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-start gap-3 p-4 rounded-2xl bg-gradient-to-br from-[#0D1B4B] to-[#1A3F8F] text-white shadow-[0_4px_16px_rgba(13,27,75,0.2)] hover:shadow-[0_8px_28px_rgba(13,27,75,0.35)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+          >
+            <span className="material-symbols-outlined text-xl opacity-80">open_in_new</span>
+            <div>
+              <p className="font-bold text-sm leading-tight">Acesse o Site</p>
+              <p className="text-white/60 text-xs mt-0.5">Especialidades</p>
+            </div>
+          </a>
+
+          {/* Instagram — meia largura */}
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-start gap-3 p-4 rounded-2xl bg-white border border-[#CBD5E0] text-[#0D1B4B] shadow-sm hover:border-[#164ea3] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+          >
+            <span className="material-symbols-outlined text-xl text-[#E1306C]">photo_camera</span>
+            <div>
+              <p className="font-bold text-sm leading-tight">Instagram</p>
+              <p className="text-[#6B7280] text-xs mt-0.5">@drlucasnemes</p>
+            </div>
+          </a>
+
+          {/* Google Maps — meia largura */}
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-start gap-3 p-4 rounded-2xl bg-white border border-[#CBD5E0] text-[#0D1B4B] shadow-sm hover:border-[#164ea3] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+          >
+            <span className="material-symbols-outlined text-xl text-[#4285F4]">location_on</span>
+            <div>
+              <p className="font-bold text-sm leading-tight">Google Maps</p>
+              <p className="text-[#6B7280] text-xs mt-0.5">Ver localização</p>
+            </div>
+          </a>
+
+          {/* Waze — meia largura */}
+          <a
+            href={WAZE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-start gap-3 p-4 rounded-2xl bg-white border border-[#CBD5E0] text-[#0D1B4B] shadow-sm hover:border-[#164ea3] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+          >
+            <span className="material-symbols-outlined text-xl text-[#33CCFF]">navigation</span>
+            <div>
+              <p className="font-bold text-sm leading-tight">Waze</p>
+              <p className="text-[#6B7280] text-xs mt-0.5">Traçar rota</p>
+            </div>
+          </a>
+
         </div>
 
         {/* ── Clinic info card ──────────────────────────── */}
-        <div className="w-full rounded-2xl bg-white/8 border border-white/12 backdrop-blur-sm p-4 space-y-3">
-          <p className="text-white/60 text-xs font-semibold uppercase tracking-widest">
+        <div className="w-full rounded-2xl bg-white border border-[#CBD5E0] shadow-sm p-4 space-y-3">
+          <p className="text-[#6B7280] text-xs font-semibold uppercase tracking-widest">
             Clínica
           </p>
           <div className="flex items-start gap-3">
-            <span className="material-symbols-outlined text-[#7FA8D4] text-xl mt-0.5 shrink-0">
+            <span className="material-symbols-outlined text-[#164ea3] text-xl mt-0.5 shrink-0">
               location_on
             </span>
             <div>
-              <p className="text-white text-sm font-medium leading-snug">
+              <p className="text-[#0D1B4B] text-sm font-medium leading-snug">
                 {CLINIC_ADDRESS}
               </p>
-              <p className="text-white/50 text-xs mt-0.5">
+              <p className="text-[#6B7280] text-xs mt-0.5">
                 {CLINIC_CITY} — {CLINIC_STATE}
               </p>
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <span className="material-symbols-outlined text-[#7FA8D4] text-xl shrink-0">
+            <span className="material-symbols-outlined text-[#164ea3] text-xl shrink-0">
               schedule
             </span>
-            <p className="text-white/70 text-sm">{CLINIC_HOURS}</p>
+            <p className="text-[#4A5568] text-sm">{CLINIC_HOURS}</p>
           </div>
         </div>
 
         {/* ── Footer ────────────────────────────────────── */}
-        <div className="pt-4 text-center space-y-1">
+        <div className="pt-2 text-center space-y-2">
           <Image
-            src="/Logo-light.png"
+            src="/logo-azul.png"
             alt={DOCTOR_NAME}
-            width={120}
-            height={32}
-            className="mx-auto opacity-60"
+            width={110}
+            height={28}
+            className="mx-auto opacity-70"
           />
-          <p className="text-white/30 text-xs">
-            © {new Date().getFullYear()} {DOCTOR_NAME} · Todos os direitos
-            reservados
+          <p className="text-[#9CA3AF] text-xs">
+            © {new Date().getFullYear()} {DOCTOR_NAME} · Todos os direitos reservados
           </p>
         </div>
+
       </div>
     </main>
   );
