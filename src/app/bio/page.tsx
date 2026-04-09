@@ -94,7 +94,15 @@ export default function BioPage() {
             rel="noopener noreferrer"
             className="col-span-2 flex items-center gap-4 px-5 py-4 rounded-2xl bg-[#25D366] text-white shadow-[0_6px_24px_rgba(37,211,102,0.35)] hover:shadow-[0_10px_36px_rgba(37,211,102,0.5)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
           >
-            <span className="material-symbols-outlined text-2xl shrink-0">chat</span>
+            <div className="w-8 h-8 shrink-0 relative flex items-center justify-center">
+              <Image 
+                src="/agende.png" 
+                alt="Agendar" 
+                width={32} 
+                height={32} 
+                className="object-contain"
+              />
+            </div>
             <div className="flex-1">
               <p className="font-bold text-sm leading-tight">Agendar Consulta</p>
               <p className="text-white/75 text-xs mt-0.5">Resposta rápida via WhatsApp</p>
@@ -109,7 +117,13 @@ export default function BioPage() {
             rel="noopener noreferrer"
             className="flex flex-col items-start gap-3 p-4 rounded-2xl bg-gradient-to-br from-[#0D1B4B] to-[#1A3F8F] text-white shadow-[0_4px_16px_rgba(13,27,75,0.2)] hover:shadow-[0_8px_28px_rgba(13,27,75,0.35)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
           >
-            <span className="material-symbols-outlined text-xl opacity-80">open_in_new</span>
+            <Image 
+              src="/renderizacao-3d-do-icone-da-interface-do-usuario.png" 
+              alt="Site" 
+              width={24} 
+              height={24} 
+              className="object-contain"
+            />
             <div>
               <p className="font-bold text-sm leading-tight">Acesse o Site</p>
               <p className="text-white/60 text-xs mt-0.5">Especialidades</p>
@@ -123,7 +137,13 @@ export default function BioPage() {
             rel="noopener noreferrer"
             className="flex flex-col items-start gap-3 p-4 rounded-2xl bg-white border border-[#CBD5E0] text-[#0D1B4B] shadow-sm hover:border-[#164ea3] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
           >
-            <span className="material-symbols-outlined text-xl text-[#E1306C]">photo_camera</span>
+            <Image 
+              src="/insta.png" 
+              alt="Instagram" 
+              width={24} 
+              height={24} 
+              className="object-contain"
+            />
             <div>
               <p className="font-bold text-sm leading-tight">Instagram</p>
               <p className="text-[#6B7280] text-xs mt-0.5">@drlucasnemes</p>
@@ -137,7 +157,13 @@ export default function BioPage() {
             rel="noopener noreferrer"
             className="flex flex-col items-start gap-3 p-4 rounded-2xl bg-white border border-[#CBD5E0] text-[#0D1B4B] shadow-sm hover:border-[#164ea3] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
           >
-            <span className="material-symbols-outlined text-xl text-[#4285F4]">location_on</span>
+            <Image 
+              src="/mapa.png" 
+              alt="Maps" 
+              width={24} 
+              height={24} 
+              className="object-contain"
+            />
             <div>
               <p className="font-bold text-sm leading-tight">Google Maps</p>
               <p className="text-[#6B7280] text-xs mt-0.5">Ver localização</p>
@@ -195,10 +221,23 @@ export default function BioPage() {
             height={28}
             className="mx-auto opacity-70"
           />
-          <p className="text-[#9CA3AF] text-xs">
-            © {new Date().getFullYear()} {DOCTOR_NAME} · Todos os direitos reservados
-          </p>
+          <div className="space-y-1">
+            <p className="text-[#9CA3AF] text-xs">
+              © {new Date().getFullYear()} {DOCTOR_NAME} · Todos os direitos reservados
+            </p>
+            <a 
+              href="https://majorhub.com.br" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block text-[#9CA3AF] text-[10px] hover:text-[#164ea3] transition-colors"
+            >
+              desenvolvido por @hub.major
+            </a>
+          </div>
         </div>
+
+      </div>
+    </main>
 
       </div>
     </main>
