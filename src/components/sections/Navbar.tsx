@@ -18,9 +18,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all ${
-        isScrolled ? "glass-nav shadow-sm" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all ${isScrolled ? "glass-nav shadow-sm" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
         <div className="flex items-center gap-2">

@@ -20,7 +20,7 @@ export default function Clinic() {
     <section className="bg-zinc-50 py-32 lg:py-40 relative overflow-hidden" id="clinica">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 lg:items-start">
-          
+
           {/* Left Column: Heading and Amenities */}
           <div className="lg:col-span-5 relative z-10">
             <div className="lg:sticky lg:top-32">
@@ -86,17 +86,17 @@ export default function Clinic() {
               className="relative w-full lg:w-[90%] min-h-[600px] lg:min-h-[800px] bg-zinc-200"
             >
               {/* Main Image */}
-              <img 
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80" 
-                alt="Interior da clínica" 
+              <img
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80"
+                alt="Interior da clínica"
                 className="absolute inset-0 w-full h-full object-cover contrast-[1.05]"
               />
-              
+
               {/* Subtle Dark Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent opacity-80" />
 
               {/* Floating Info Box (Asymmetric Override) */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -112,9 +112,9 @@ export default function Clinic() {
                       {CLINIC_ADDRESS}
                     </p>
                   </div>
-                  
+
                   <div className="w-full h-px bg-zinc-800/50" />
-                  
+
                   <div>
                     <p className="text-zinc-500 text-xs font-bold uppercase tracking-widest mb-3">Atendimento</p>
                     <p className="flex items-center gap-4 text-lg">
@@ -124,13 +124,13 @@ export default function Clinic() {
                   </div>
 
                   <div className="pt-4">
-                    <a 
-                      href={`https://maps.google.com/?q=${encodeURIComponent(CLINIC_ADDRESS)}`} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href={`https://maps.google.com/?q=${encodeURIComponent(CLINIC_ADDRESS)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest group"
                     >
-                      Como chegar 
+                      Como chegar
                       <span className="p-2 border border-zinc-700 rounded-full group-hover:bg-white group-hover:text-zinc-950 group-hover:border-white transition-all">
                         <MapPin className="w-4 h-4" />
                       </span>

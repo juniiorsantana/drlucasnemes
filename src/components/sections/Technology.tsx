@@ -8,14 +8,16 @@ const CARDS = [
     title: "Calorimetria indireta",
     description:
       "Descobrimos quantas calorias seu corpo realmente consome em repouso. Sem achismo — seu plano é baseado no seu metabolismo real.",
-    image: "/Calorimetria.avif",
+    image:
+      "https://images.unsplash.com/photo-1580281657527-47f249e8f4df?q=80&w=1200",
   },
   {
     id: 2,
     title: "Bioimpedância Avançada",
     description:
       "Mapeamos em detalhes sua composição corporal — gordura, massa magra e retenção de líquidos — para entender exatamente o que está impedindo seu resultado.",
-    image: "/bioimpedancia.avif",
+    image:
+      "https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=1200",
   },
   {
     id: 3,
@@ -32,7 +34,8 @@ const CARDS = [
     title: "Protocolo Biologix",
     description:
       "Integramos todos os dados para criar um plano estratégico totalmente personalizado, focado em corrigir a raiz do problema e acelerar seus resultados.",
-    image: "/biologix-em-cuiaba.avif",
+    image:
+      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1200",
   },
 ];
 
@@ -73,10 +76,9 @@ export default function TechnologyStack() {
                   className={`
                     grid grid-cols-2 h-[360px] mb-20 rounded-3xl overflow-hidden
                     border transition-all duration-300
-                    ${
-                      card.highlight
-                        ? "bg-primary text-white border-transparent shadow-2xl"
-                        : "bg-white text-primary border-gray-100 shadow-lg"
+                    ${card.highlight
+                      ? "bg-primary text-white border-transparent shadow-2xl"
+                      : "bg-white text-primary border-gray-100 shadow-lg"
                     }
                   `}
                 >
@@ -94,10 +96,9 @@ export default function TechnologyStack() {
                     <span
                       className={`
                         inline-block text-xs font-semibold px-3 py-1 rounded-md w-fit mb-3
-                        ${
-                          card.highlight
-                            ? "bg-white/10 text-white/70"
-                            : "bg-gray-100 text-gray-400"
+                        ${card.highlight
+                          ? "bg-white/10 text-white/70"
+                          : "bg-gray-100 text-gray-400"
                         }
                       `}
                     >
@@ -115,9 +116,8 @@ export default function TechnologyStack() {
                     )}
 
                     <p
-                      className={`mt-4 ${
-                        card.highlight ? "opacity-85" : "text-gray-500"
-                      }`}
+                      className={`mt-4 ${card.highlight ? "opacity-85" : "text-gray-500"
+                        }`}
                     >
                       {card.description}
                     </p>
@@ -135,10 +135,9 @@ export default function TechnologyStack() {
               key={card.id}
               className={`
                 rounded-2xl overflow-hidden border shadow-md
-                ${
-                  card.highlight
-                    ? "bg-primary text-white border-transparent"
-                    : "bg-white text-primary border-gray-100"
+                ${card.highlight
+                  ? "bg-primary text-white border-transparent"
+                  : "bg-white text-primary border-gray-100"
                 }
               `}
             >

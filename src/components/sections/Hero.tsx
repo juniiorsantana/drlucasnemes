@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
 
       {/* Conteúdo */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-20 pt-40">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-40 pt-40">
         <div className="max-w-2xl space-y-6 animate-fade-up">
 
           <SectionLabel>
