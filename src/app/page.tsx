@@ -1,4 +1,4 @@
-import { CRM, RQE, DOCTOR_NAME, CLINIC_ADDRESS, CLINIC_CITY, CLINIC_STATE, CLINIC_PHONE_FORMATTED } from "@/lib/constants";
+import { CRM, RQE, DOCTOR_NAME, CLINIC_ADDRESS, CLINIC_CITY, CLINIC_STATE, CLINIC_PHONE_FORMATTED, SITE_URL } from "@/lib/constants";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
@@ -15,7 +15,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Physician",
   name: DOCTOR_NAME,
-  image: "https://example.com/photo.jpg",
+  image: `${SITE_URL}/Quem sou.avif`,
   description:
     "Médico Nutrólogo especialista em emagrecimento, reposição hormonal e performance",
   medicalSpecialty: "Nutrologia",

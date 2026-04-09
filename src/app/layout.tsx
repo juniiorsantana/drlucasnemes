@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
+import { DOCTOR_NAME, CLINIC_NAME, SITE_URL, SEO_KEYWORDS } from "@/lib/constants";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -15,29 +16,67 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Lucas Nemes — Nutrólogo em Cuiabá | CRM/MT 8060",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Dr. Lucas Nemes — Nutrólogo em Cuiabá | CRM/MT 8060",
+    template: "%s | Dr. Lucas Nemes",
+  },
   description:
     "Médico Nutrólogo especialista em emagrecimento, reposição hormonal e performance em Cuiabá-MT. Tecnologia de ponta, diagnóstico preciso e acompanhamento personalizado.",
-  keywords: [
-    "nutrólogo",
-    "cuiabá",
-    "emagrecimento",
-    "nutrologia",
-    "reposição hormonal",
-    "performance",
-    "médico",
-    "mt",
-  ],
+  keywords: SEO_KEYWORDS.split(", "),
+  authors: [{ name: DOCTOR_NAME }],
+  creator: DOCTOR_NAME,
+  publisher: CLINIC_NAME,
+  formatDetection: {
+    email: false,
+    address: true,
+    telephone: true,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Dr. Lucas Nemes — Nutrólogo em Cuiabá",
     description:
       "Especialista em emagrecimento duradouro, reposição hormonal e performance. CRM/MT 8060 · RQE 7982",
-    type: "website",
+    url: SITE_URL,
+    siteName: "Dr. Lucas Nemes",
     locale: "pt_BR",
+    type: "website",
+    images: [
+      {
+        url: "/Quem sou.avif",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Lucas Nemes - Nutrologia em Cuiabá",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dr. Lucas Nemes — Nutrólogo em Cuiabá",
+    description:
+      "Médico Nutrólogo especialista em emagrecimento, reposição hormonal e performance em Cuiabá-MT.",
+    creator: "@drlucasnemes",
+    images: ["/Quem sou.avif"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   alternates: {
-    canonical: "https://www.drlucasnemes.com.br",
+    canonical: SITE_URL,
   },
+  category: "health",
 };
 
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
