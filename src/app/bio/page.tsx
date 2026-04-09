@@ -238,8 +238,5 @@ export default function BioPage() {
 
       </div>
     </main>
-
-      </div>
-    </main>
   );
 }
