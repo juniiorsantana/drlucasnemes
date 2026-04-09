@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dr. Lucas Nemes - Nutrologia &amp; Performance</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#b6c4ff",
+                        "secondary-fixed": "#6eff7b",
+                        "secondary": "#006e20",
+                        "primary-container": "#001d66",
+                        "tertiary-fixed": "#dae2ff",
+                        "on-background": "#191c1d",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-container": "#5487ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#00215c",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed-variant": "#005316",
+                        "on-tertiary-fixed": "#001848",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000e31",
+                        "primary": "#000b36",
+                        "outline-variant": "#c5c5d2",
+                        "on-primary-fixed-variant": "#2d4289",
+                        "secondary-fixed-dim": "#37e358",
+                        "primary-fixed": "#dce1ff",
+                        "secondary-container": "#59fe6f",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "inverse-surface": "#2e3132",
+                        "inverse-primary": "#b6c4ff",
+                        "outline": "#757682",
+                        "on-secondary-container": "#007322",
+                        "surface-tint": "#465aa3",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9fa",
+                        "tertiary-fixed-dim": "#b2c5ff",
+                        "on-primary-container": "#7588d4",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface-variant": "#454651",
+                        "surface-dim": "#d9dadb",
+                        "surface-bright": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#002105",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-primary-fixed": "#001551",
+                        "on-tertiary-fixed-variant": "#0040a2",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .editorial-shadow {
+            box-shadow: 0 12px 40px -12px rgba(25, 28, 29, 0.04);
+        }
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container">
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
+<div class="flex items-center gap-2">
+<span class="text-xl font-headline font-extrabold tracking-tight text-primary uppercase">LN Dr. Lucas Nemes</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-headline font-bold text-sm tracking-tight">
+<a class="text-secondary border-b-2 border-secondary" href="#">Início</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#sobre">Sobre</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#servicos">Serviços</a>
+<span class="text-outline">CRM-MT 11467</span>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden md:flex items-center gap-2 bg-secondary text-on-secondary px-6 py-2.5 rounded-full font-label font-bold text-sm hover:opacity-90 transition-all editorial-shadow active:scale-95" href="https://wa.me/yournumber">
+<span class="material-symbols-outlined text-lg">chat</span>
+                    Agendar Consulta
+                </a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen pt-32 pb-20 flex items-center overflow-hidden bg-surface">
+<div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10 space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label text-xs font-bold uppercase tracking-wider">
+                        Medicina de Precisão
+                    </div>
+<h1 class="text-5xl lg:text-7xl font-headline font-extrabold text-primary leading-[1.1] tracking-tighter">
+                        Nutrólogo em Cuiabá: <span class="text-secondary">Elimine o Cansaço</span> e Transforme Seu Corpo.
+                    </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Com acompanhamento médico especializado, recupere sua vitalidade e alcance sua melhor performance através da nutrologia avançada.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-label font-bold text-lg hover:opacity-90 transition-all editorial-shadow flex items-center justify-center gap-3 active:scale-95">
+                            Agende Sua Consulta
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative order-first lg:order-last">
+<div class="aspect-square rounded-[3rem] overflow-hidden editorial-shadow bg-surface-container-high border-8 border-surface-container-lowest">
+<img alt="Dr. Lucas Nemes médico nutrólogo especialista em emagrecimento e performance em seu consultório clínico" class="w-full h-full object-cover" data-alt="Professional portrait of a confident male doctor in white lab coat smiling in a clean modern medical office with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAXZkbrM58PhREG0IvXpQx5egOs1oj7qxuai8YBUIdF3Pm8ZLmeix00Fci9mOoiG_3o_9Kzqc9SNOAjasCYbV66kl_oHciu46LyAQIR657H_8jCwtecsiEQk4p4XP7JEL6jw3cwp2WLmdRg0prTh9-5YdFjs72ljfJp637NDd0o4U0k90t7MCDpqDxTHVhAjYqSUfXCUTUAUSUdYmX2QfQU1U9mjnovq8hIlzcgPeMHYB2DFA5nXth46rYWsx53mZOOY0MmAzOZ8U"/>
+</div>
+<!-- Accent floating card -->
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-2xl editorial-shadow border border-outline-variant/10 max-w-[200px]">
+<p class="text-primary font-headline font-bold text-2xl">8060</p>
+<p class="text-on-surface-variant text-xs font-label">CRM-MT / RQE 7982</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Pillars Section -->
+<section class="py-24 bg-surface-container" id="servicos">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+<h2 class="text-4xl font-headline font-extrabold text-primary tracking-tight">
+                        Descubra como a Nutrologia médica personalizada pode transformar sua qualidade de vida.
+                    </h2>
+<p class="text-on-surface-variant font-body leading-relaxed">
+                        Que tal descobrir como a nutrição de precisão pode transformar não apenas sua aparência, mas toda sua relação com a alimentação e bem-estar?
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<!-- Emagrecimento -->
+<div class="group bg-surface-container-lowest p-10 rounded-[2rem] editorial-shadow transition-all hover:-translate-y-2 border border-outline-variant/10">
+<div class="w-16 h-16 bg-secondary-container rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-weight="fill">monitoring</span>
+</div>
+<h3 class="text-2xl font-headline font-extrabold text-primary mb-4">Emagrecimento Saudável</h3>
+<p class="text-on-surface-variant leading-relaxed">Protocolos personalizados focados na perda de gordura preservando a massa magra e saúde metabólica.</p>
+</div>
+<!-- Longevidade -->
+<div class="group bg-surface-container-lowest p-10 rounded-[2rem] editorial-shadow transition-all hover:-translate-y-2 border border-outline-variant/10">
+<div class="w-16 h-16 bg-primary-fixed rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary-fixed text-3xl" data-weight="fill">vital_signs</span>
+</div>
+<h3 class="text-2xl font-headline font-extrabold text-primary mb-4">Longevidade e Bem-estar</h3>
+<p class="text-on-surface-variant leading-relaxed">Foco na saúde preventiva, equilíbrio hormonal e reposição de nutrientes para uma vida vibrante.</p>
+</div>
+<!-- Alta Performance -->
+<div class="group bg-surface-container-lowest p-10 rounded-[2rem] editorial-shadow transition-all hover:-translate-y-2 border border-outline-variant/10">
+<div class="w-16 h-16 bg-secondary text-on-secondary rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">exercise</span>
+</div>
+<h3 class="text-2xl font-headline font-extrabold text-primary mb-4">Alta Performance</h3>
+<p class="text-on-surface-variant leading-relaxed">Otimização biológica para atletas e entusiastas que buscam superar seus limites físicos e mentais.</p>
+</div>
+</div>
+<div class="text-center">
+<button class="bg-secondary text-on-secondary px-10 py-5 rounded-full font-label font-bold text-lg hover:opacity-90 transition-all editorial-shadow active:scale-95">
+                        Agende Sua Consulta
+                    </button>
+</div>
+</div>
+</section>
+<!-- How it Works Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20 text-center lg:text-left">
+<h2 class="text-4xl font-headline font-extrabold text-primary tracking-tight max-w-4xl">
+                        Entenda como potencializamos sua saúde com precisão, tecnologia e cuidado personalizado.
+                    </h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-highest text-primary font-label text-xs font-bold uppercase tracking-wider">
+                            01. Personalização Extrema
+                        </div>
+<h3 class="text-3xl font-headline font-bold text-primary">Terapêuticos Personalizados</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<p class="text-on-surface-variant">Análise laboratorial profunda para identificar carências reais.</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<p class="text-on-surface-variant">Protocolos específicos para cada perfil metabólico e objetivo.</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<p class="text-on-surface-variant">Suplementação de precisão baseada em evidências científicas.</p>
+</li>
+</ul>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<img alt="Laboratório médico tecnológico para exames de precisão" class="rounded-3xl editorial-shadow object-cover h-64 w-full" data-alt="Modern medical laboratory equipment with sterile glass tubes and high-tech analysis devices in a brightly lit clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWSE4S8ZDtAOcLCwWqZN4SqclBfYkXLHuHmJ-ia592D1Ab2hSJqE7g3s6hYf6TYD0snb8SXIQog_Ae-6fvV5yzNjcKFpHrrFMClzewn9wYBylmnS7ISsfQRQISLyn4lsS2B1TMvKUVA3BB4X5pqAtyt4ZZGoiWwWvtiXfs7gLe_2-X84JkHhg3khDpm-ZHzKRVnbnO8DUl3DEXHBVnC-kzUkyNtYVoyURjgMcCvP70Qx0r6fSjHYJXXQH7vTdm4Qi5eUcxKg8O95A"/>
+<img alt="Alimentação saudável e nutritiva como base do tratamento" class="rounded-3xl editorial-shadow object-cover h-48 w-full" data-alt="Aerial view of a colorful salad with fresh greens, vegetables and proteins on a clean white surface representing healthy nutrition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMkFH3jDeKBWCbtrkt0FOiZFtm7aRDuBshWYBiX2JYS1LaND21QNEbs5QY6QOxbwIKhaC3cDFhyYeiqSTAYDtBRROrk8rVMsRotEMAa8HpiPauIVNLnC1YKsuAAorf58C_qpQOHAG9cshApMzlzgNOhq3Eat4ahLx-O9w4v_Y1iWyVPi9u0lHggWQes9fq2WMfhdJagCzjtXsEZMbAzadB7syF8oZuYRqR_ATdyH7acP4ZvRKF60hYxq_frz-JuB76hW1VIi0Xmkw"/>
+</div>
+<div class="space-y-4">
+<img alt="Equipamento médico para acompanhamento de pacientes" class="rounded-3xl editorial-shadow object-cover h-48 w-full" data-alt="Macro shot of clinical equipment and professional stethoscope on a modern doctor's desk in a high-end wellness center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9YlCnXvThyFTuaTXKh3HIJw6okIhMab1DO9BFLobqokddh9GAJb4ApcF8WnsUBKx7j9SX0LI0iClhSIlSqo17Ud-2hOxAvJEiwK9IHp4ZELgg7BKeiOTRl6Tz_adsiJPswbgqJXLWqaC7lNXkPL5BlJTYjU2rf7hoDq28Mj_oCbcm03K2jpJu3cTUrjZKkeMaDHlVIMGJ9nqp_gun9x6u1Pozv__upt-PpRS0buPoOh4Zaoopj2F_4z3vFdmJdvzgdL_gtfRbGT8"/>
+<img alt="Bem estar e disposição física" class="rounded-3xl editorial-shadow object-cover h-64 w-full" data-alt="Sunlit scene of a person stretching in a park representing outdoor wellness and physical vitality" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Dmt8CqAWSP3Z-72waj5COzxVjqWPmPM-36T1UoNK7a2UQ37K84bSci4sypHPVw7EoEoNh7c5eMB8v9VCF7dVDwMOW0MlfN-I3zY1Wcy-47eHZ1UwSDdtbOa3StEutAdldmi2mqDkPeUl1GnwV9qxjIJ_05YXNZAQlQQOu0Y0yfb_Z3-cXYPG4JMx_xkaHyRIKIdCI2kjtu1vniljzmY9juqZgQzjJAKowZ6AGauuxm57VEOW4q-unEuZmcKqOytStfM33D_3TfM"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative order-last lg:order-first">
+<div class="rounded-[2.5rem] overflow-hidden editorial-shadow">
+<img alt="Casal fitness mantendo estilo de vida saudável" class="w-full h-[500px] object-cover" data-alt="Fit healthy couple running together in a sunlit urban park, looking energetic and happy representing physical performance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo7JwU4GE4S6sdD5zASUsidFtqt7K4uG9yYY2l_AL7nAXLsey_N4UF4ZdpXdGfLevlMUNWN6vDyfwM8Aq1hNGK6JhHDOl1kDlzA_h9Dh69NM2pThr2zXsdvvixzrrOaTZw62lQR-Teh8fK77vAIU2hgkjZatlhyE9YsCNoe1QLFMs_CbHUxE-_cgkp0j3M9FRxJH9XdMeqmzOWtZlrgLN3rJWhPDaZ444ZlGihbxpYdCbe_OYgFOzHOXbqV2TMVOz3q4N3VlRS9W0"/>
+</div>
+</div>
+<div class="space-y-12">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs font-bold uppercase tracking-wider">
+                                02. Terapias Avançadas
+                            </div>
+<h3 class="text-3xl font-headline font-bold text-primary">Terapia com injetáveis e Implantes Hormonais</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                                Tratamentos inovadores que garantem absorção total de nutrientes e reequilíbrio hormonal preciso para resultados duradouros e seguros.
+                            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="p-6 bg-surface-container rounded-2xl">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4" data-weight="fill">vaccines</span>
+<h4 class="font-headline font-bold text-primary mb-2">Injetáveis</h4>
+<p class="text-sm text-on-surface-variant">Absorção imediata e 100% eficaz de vitaminas e minerais.</p>
+</div>
+<div class="p-6 bg-surface-container rounded-2xl">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4" data-weight="fill">genetics</span>
+<h4 class="font-headline font-bold text-primary mb-2">Implantes</h4>
+<p class="text-sm text-on-surface-variant">Liberação controlada e fisiológica de hormônios.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialized Exam Section -->
+<section class="py-24 bg-primary text-on-primary">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h2 class="text-4xl font-headline font-extrabold tracking-tight">
+                            Polissonografia Domiciliar (Biologix)
+                        </h2>
+<p class="text-on-primary-container text-lg leading-relaxed">
+                            O diagnóstico preciso de apneia do sono no conforto do seu lar. Melhore sua qualidade de descanso para otimizar seu metabolismo e disposição diária.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-on-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed">bedtime</span>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-1">Conforto Total</h4>
+<p class="text-sm text-on-primary-container">Exame realizado na sua própria cama, sem fios ou desconforto hospitalar.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-on-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed">biotech</span>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-1">Tecnologia de Ponta</h4>
+<p class="text-sm text-on-primary-container">Sensores avançados que monitoram oxigênio, pulso e ronco com precisão clínica.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-on-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed">description</span>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-1">Laudo Especializado</h4>
+<p class="text-sm text-on-primary-container">Resultados detalhados para direcionar o tratamento correto do seu sono.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<img alt="Pessoa dormindo tranquilamente para representar a polissonografia" class="rounded-[3rem] editorial-shadow grayscale opacity-80" data-alt="Peaceful person sleeping in a comfortable bed with soft morning light, representing deep rest and sleep health" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnPcB-NrbhO0VsIyB9AtyfmXdIE4o5dNBcoE5iQLY-t9EtV2v9P69JCyOdTTj-Q2oSxcABd8QmAYf933iJFGxMJbQcim9jEhF6H-Z4O_UVPipMhpzoXX18BxiN1uMEjLUxDKcnXWRw1LFoDfvBwfhqTxxZexvMhPa5028FDlBvi22-P9jFxPS-q8mIRO8gl8sFaqBSmrNDPzvxyS7qFtxEyypN0xBqJ3e3iLKPtq8AtjhUfrPs5sMprffw2z932TS6EL7_w4AtInc"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply rounded-[3rem]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bio/About Section -->
+<section class="py-24 bg-surface" id="sobre">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
+<div class="lg:col-span-2">
+<div class="relative">
+<img alt="Dr. Lucas Nemes em atendimento clínico" class="rounded-[2rem] editorial-shadow w-full h-[600px] object-cover" data-alt="Doctor in consultation looking at medical charts and using technology in a professional modern clinic setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFGcRuMHLE0H5612U3-gZhJpyVb69kOV5dPBr1eprSfqOocgnwTaZE76YcZH5mextiDpY4unZTMyrCDz6-Cr2pva33MY3Pev13oaEbswDFJ6DjFklMgt0IPlhyvtpCAHtGoKTWZ-VVU9A4t8ogl8URbcjDlKnI7F32fv-lvhRKVwmJQR5xGLLaEoY-GBqpCJJ90ALmgTX4u-w5SxjtqDeendbe7-4Zl-1fezo8RYd4iLYeyrqmuXcPmJzjUUqommI8LhPSWxsopaQ"/>
+<div class="absolute -bottom-8 -right-8 flex gap-4">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center editorial-shadow text-primary hover:text-secondary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">share</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 space-y-8">
+<div class="space-y-4">
+<h2 class="text-4xl font-headline font-extrabold text-primary leading-tight">
+                                Dr. Lucas Nemes - Nutrólogo Especialista em Emagrecimento em Cuiabá-MT
+                            </h2>
+<p class="text-sm font-label font-bold text-secondary uppercase tracking-widest">CRM/MT 8060 RQE 7982</p>
+</div>
+<div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
+<p>
+                                Dedicado a transformar a vida de meus pacientes através de uma abordagem científica e humanizada da Nutrologia. Minha missão é proporcionar não apenas a perda de peso, mas uma readequação completa da saúde metabólica e performance humana.
+                            </p>
+<p>
+                                Com anos de experiência no mercado de Cuiabá, utilizo o que há de mais moderno em exames e terapias para garantir que cada paciente tenha um plano único, desenhado para sua biologia e rotina.
+                            </p>
+</div>
+<div class="flex gap-4 items-center pt-4">
+<a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">video_library</span>
+</a>
+</div>
+<button class="w-full sm:w-auto bg-secondary text-on-secondary px-12 py-5 rounded-full font-label font-bold text-lg hover:opacity-90 transition-all editorial-shadow flex items-center justify-center gap-3 active:scale-95">
+                            Agende Uma Consulta Agora
+                            <span class="material-symbols-outlined">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-primary text-on-primary py-16">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+<div class="text-2xl font-headline font-extrabold tracking-tight uppercase">
+                    LN Dr. Lucas Nemes
+                </div>
+<div class="flex gap-8 text-sm font-label text-on-primary-container">
+<a class="hover:text-white transition-colors" href="#">Termos de Uso</a>
+<a class="hover:text-white transition-colors" href="#">Política de Privacidade</a>
+<a class="hover:text-white transition-colors" href="#">Contato</a>
+</div>
+</div>
+<div class="pt-8 border-t border-on-primary-container/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-primary-container/60 font-body">
+<p>© 2024 Dr. Lucas Nemes - Nutrologia &amp; Performance. Todos os direitos reservados.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                    Cuiabá - Mato Grosso, Brasil
+                </div>
+</div>
+</div>
+</footer>
+</body></html>
