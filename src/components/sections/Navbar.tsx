@@ -47,7 +47,6 @@ export default function Navbar() {
             variant="primary"
             size="sm"
             className="hidden md:flex"
-            icon="chat"
           >
             Agendar Consulta
           </Button>
@@ -74,7 +73,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button href={WHATSAPP_URL} variant="primary" size="md" icon="chat">
+            <Button href={WHATSAPP_URL} variant="primary" size="md">
               Agendar Consulta
             </Button>
           </div>

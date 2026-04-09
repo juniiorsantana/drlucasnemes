@@ -40,6 +40,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { SmoothScroll } from "@/components/providers/SmoothScroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,7 +50,8 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${manrope.variable} scroll-smooth`}
+      className={`${inter.variable} ${manrope.variable}`}
+      suppressHydrationWarning
     >
       <head>
         {/* Material Symbols Font */}
@@ -66,8 +69,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="scroll-smooth bg-surface text-on-surface selection:bg-secondary-container antialiased">
-        {children}
+      <body className="bg-surface text-on-surface selection:bg-secondary-container antialiased" suppressHydrationWarning>
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

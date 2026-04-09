@@ -4,7 +4,7 @@
  */
 
 // WhatsApp Integration
-export const WHATSAPP_NUMBER = "5565999995515";
+export const WHATSAPP_NUMBER = "556596971216";
 export const WHATSAPP_MESSAGE =
   "Olá, Dr. Lucas! Gostaria de agendar uma consulta.";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
@@ -16,8 +16,8 @@ export const CLINIC_CITY = "Cuiabá";
 export const CLINIC_STATE = "MT";
 export const CLINIC_POSTAL_CODE = "78043-112";
 export const CLINIC_HOURS = "Segunda a Sexta, 07:00 às 19:00";
-export const CLINIC_PHONE = "(65) 9 9999-5515";
-export const CLINIC_PHONE_FORMATTED = "5565999995515";
+export const CLINIC_PHONE = "(65) 9697-1216";
+export const CLINIC_PHONE_FORMATTED = "556596971216";
 
 // Doctor Credentials
 export const DOCTOR_NAME = "Dr. Lucas Nemes";

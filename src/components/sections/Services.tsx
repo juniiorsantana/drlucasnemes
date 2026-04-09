@@ -43,38 +43,42 @@ function FlipCard({ card }: { card: CardData }) {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <div
-      className="group"
-      style={{ perspective: "1000px" }}
-    >
+    <div style={{ perspective: "1000px" }}>
       <div
         className="relative w-full transition-transform duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
         style={{
-          height: "350px",
+          height: "370px",
           transformStyle: "preserve-3d",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
         }}
       >
         {/* FACE FRENTE */}
         <div
-          className="absolute inset-0 flex flex-col rounded-2xl overflow-hidden border border-outline-variant/20 shadow-editorial bg-surface-container-lowest"
+          className="absolute inset-0 flex flex-col rounded-2xl overflow-hidden"
           style={{ backfaceVisibility: "hidden" }}
         >
-          {/* Foto real */}
-          <div className="relative h-40 bg-surface-container-high flex-shrink-0">
+          {/* Foto */}
+          <div className="relative h-44 flex-shrink-0">
             <Image
               src={card.imageUrl}
               alt={card.title}
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-black/30" />
           </div>
 
-          {/* Conteúdo */}
-          <div className="flex flex-col flex-1 p-6 justify-between">
-            <div className="space-y-2">
-              <h3 className="text-xl font-headline font-extrabold text-primary leading-tight">
+          {/* Conteúdo glass */}
+          <div
+            className="flex flex-col flex-1 p-5 justify-between border border-white/50 border-t-0 rounded-b-2xl"
+            style={{
+              background: "rgba(255,255,255,0.55)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+            }}
+          >
+            <div className="space-y-1.5">
+              <h3 className="text-lg font-headline font-extrabold text-primary leading-tight">
                 {card.title}
               </h3>
               <p className="text-on-surface-variant text-sm leading-relaxed">
@@ -82,12 +86,11 @@ function FlipCard({ card }: { card: CardData }) {
               </p>
             </div>
 
-            {/* Botão + */}
-            <div className="flex justify-end mt-4">
+            <div className="flex justify-end mt-3">
               <button
                 onClick={() => setFlipped(true)}
                 aria-label={`Ver mais sobre ${card.title}`}
-                className="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center text-xl font-light leading-none shadow-[0_4px_16px_rgba(13,27,75,0.35)] hover:shadow-[0_6px_24px_rgba(13,27,75,0.5)] hover:scale-110 active:scale-95 transition-all duration-200 select-none"
+                className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-xl font-light leading-none shadow-[0_4px_16px_rgba(13,27,75,0.35)] hover:shadow-[0_6px_24px_rgba(13,27,75,0.5)] hover:scale-110 active:scale-95 transition-all duration-200 select-none cursor-pointer"
               >
                 +
               </button>
@@ -97,7 +100,7 @@ function FlipCard({ card }: { card: CardData }) {
 
         {/* FACE VERSO */}
         <div
-          className="absolute inset-0 flex flex-col rounded-2xl overflow-hidden border border-primary/20 shadow-editorial bg-primary p-6"
+          className="absolute inset-0 flex flex-col rounded-2xl overflow-hidden border border-primary/20 bg-primary p-6"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
@@ -105,10 +108,10 @@ function FlipCard({ card }: { card: CardData }) {
         >
           <div className="flex flex-col flex-1 justify-between">
             <div className="space-y-4">
-              <h3 className="text-xl font-headline font-extrabold text-on-primary leading-tight">
+              <h3 className="text-xl font-headline font-extrabold text-white leading-tight">
                 {card.title}
               </h3>
-              <p className="text-on-primary/80 leading-relaxed text-sm">
+              <p className="text-white/80 leading-relaxed text-sm">
                 {card.description}
               </p>
             </div>
@@ -122,7 +125,7 @@ function FlipCard({ card }: { card: CardData }) {
               </a>
               <button
                 onClick={() => setFlipped(false)}
-                className="w-full text-center text-on-primary/60 text-xs hover:text-on-primary transition-colors duration-200 py-1"
+                className="w-full text-center text-white/60 text-xs hover:text-white transition-colors duration-200 py-1 cursor-pointer"
               >
                 ← Voltar
               </button>
@@ -151,7 +154,7 @@ export default function Services() {
             qualidade de vida.
           </h2>
         </div>
-        
+
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {CARDS.map((card) => (

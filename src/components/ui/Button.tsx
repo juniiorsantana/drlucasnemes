@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "ghost" | "secondary";
+  variant?: "primary" | "ghost" | "secondary" | "premium" | "whatsapp";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
   href?: string;
@@ -36,6 +36,20 @@ export default function Button({
     ].join(" "),
     ghost:
       "bg-transparent text-[#164ea3] hover:bg-[#164ea3]/10 focus:ring-[#164ea3]",
+    premium: [
+      "bg-white text-primary",
+      "shadow-[0_8px_32px_rgba(255,255,255,0.25)]",
+      "hover:shadow-[0_12px_48px_rgba(255,255,255,0.45)]",
+      "hover:-translate-y-1 active:scale-95",
+      "focus:ring-white",
+    ].join(" "),
+    whatsapp: [
+      "bg-[#25D366] text-white",
+      "shadow-[0_6px_30px_rgba(37,211,102,0.4)]",
+      "hover:shadow-[0_12px_48px_rgba(37,211,102,0.65)]",
+      "hover:-translate-y-1 active:scale-95",
+      "focus:ring-[#25D366]",
+    ].join(" "),
   };
 
   const sizeStyles = {

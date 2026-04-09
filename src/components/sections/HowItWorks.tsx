@@ -1,135 +1,154 @@
 "use client";
 
+import { Check } from "lucide-react";
 import { motion } from "framer-motion";
-import { Stethoscope, Activity, ScanLine, Target } from "lucide-react";
 
-const steps = [
+const HOW_IT_WORKS = [
   {
-    title: "Avaliação clínica completa",
-    description: "Análise profunda do seu histórico, rotina, exames anteriores e queixas atuais. Entendemos todo o seu cenário antes de qualquer prescrição.",
-    icon: Stethoscope,
+    type: "main",
+    badge: "Serviços",
+    title: "Terapêuticos Personalizados",
+    description: "Reposições e tratamentos personalizados para melhorar sua saúde, elevar seu bem-estar de forma inteligente.",
+    bullets: [
+      "Ganho de energia e disposição",
+      "Melhora desempenho físico e mental",
+      "Redução do estresse e da fadiga",
+      "Controle de peso"
+    ],
+    image: "/Quem sou.avif",
   },
   {
-    title: "Bioimpedância avançada",
-    description: "Mapeamento em tempo real da sua composição corporal. Não olhamos apenas para o peso, mas sim para o que ele representa (massa magra, gordura, água).",
-    icon: Activity,
+    type: "grid",
+    badge: "Etapa de Reequilíbrio",
+    title: "Terapia com injetáveis",
+    description: "Reposição estratégica de nutrientes, vitaminas e substâncias essenciais diretamente na corrente sanguínea. Ideal para:",
+    bullets: [
+      "Fortalecer o sistema imunológico",
+      "Acelerar recuperação muscular",
+      "Otimizar o metabolismo",
+      "Controle de peso"
+    ],
+    image: "/calendario.jpg",
   },
   {
-    title: "Exame DEXA (padrão ouro)",
-    description: "Avaliação médica de precisão milimétrica, entregando dados exatos sobre densidade óssea, massa magra e tecido adiposo regional.",
-    icon: ScanLine,
-  },
-  {
-    title: "Plano estratégico",
-    description: "Sem dietas genéricas. Você recebe um direcionamento nutricional e médico focado na resolução da raiz do problema.",
-    icon: Target,
-  },
+    type: "grid",
+    badge: "Fase de Equilíbrio",
+    title: "Implantes Hormonais",
+    description: "Liberação contínua e controlada de hormônios. Adaptada às necessidades do seu corpo. Indicado para:",
+    bullets: [
+      "Ganho de massa muscular",
+      "Melhora da disposição e libido",
+      "Estabilidade no controle de peso",
+      "Bem-estar geral"
+    ],
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=800", // Gym fallback
+  }
 ];
 
 export default function HowItWorks() {
+  const mainCard = HOW_IT_WORKS.find(item => item.type === "main");
+  const gridCards = HOW_IT_WORKS.filter(item => item.type === "grid");
+
   return (
-    <section className="bg-zinc-950 py-32 lg:py-40 text-white relative overflow-hidden" id="metodologia">
-      {/* Background subtle effects */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[10%] left-[5%] w-[40vw] h-[40vw] bg-white/[0.02] rounded-full blur-[100px]" />
-        <div className="absolute bottom-[10%] right-[5%] w-[30vw] h-[30vw] bg-zinc-800/20 rounded-full blur-[120px]" />
-      </div>
+    <section id="como-funciona" className="bg-surface py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* SECTION HEADER */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16 lg:mb-24"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary max-w-4xl mx-auto leading-tight font-headline">
+            Entenda como potencializamos sua saúde com precisão, tecnologia e <span className="italic font-light text-secondary">cuidado personalizado</span>.
+          </h2>
+        </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
-          
-          {/* Left Column: sticky header */}
-          <div className="lg:col-span-5 relative">
-            <div className="lg:sticky lg:top-32 space-y-8">
-              <span className="inline-block border border-zinc-700 text-zinc-300 px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-                A Metodologia
-              </span>
-              
-              <motion.h2
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[1.1] font-headline tracking-tight"
-              >
-                Você não precisa de <span className="text-zinc-500 font-light italic">mais dieta.</span>
-                <br />
-                Você precisa de um diagnóstico.
-              </motion.h2>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="text-zinc-400 text-lg leading-relaxed max-w-md pt-4"
-              >
-                A maioria das pessoas falha porque tenta resolver o problema errado. Nós identificamos exatamente o que está travando o seu resultado.
-              </motion.p>
-              
-              {/* Desktop CTA */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="hidden lg:block pt-10"
-              >
-                 <a href="#contato" className="inline-flex items-center justify-center px-10 py-5 bg-white text-zinc-950 font-bold uppercase tracking-widest text-sm hover:bg-zinc-200 transition-colors duration-300 group">
-                    Agendar Avaliação 
-                    <span className="ml-3 group-hover:translate-x-1 transition-transform">→</span>
-                 </a>
-              </motion.div>
+        {/* MAIN HORIZONTAL CARD */}
+        {mainCard && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 mb-8"
+          >
+            <div className="grid lg:grid-cols-2">
+              <div className="p-8 lg:p-16 flex flex-col justify-center">
+                <span className="text-xs font-bold uppercase tracking-widest text-secondary mb-4 block">
+                  {mainCard.badge}
+                </span>
+                <h3 className="text-2xl lg:text-4xl font-bold text-primary mb-6">
+                  {mainCard.title}
+                </h3>
+                <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
+                  {mainCard.description}
+                </p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {mainCard.bullets.map((bullet, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-on-surface-variant">
+                      <div className="bg-green-100 p-1 rounded-full">
+                        <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
+                      </div>
+                      <span className="font-medium">{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="h-[300px] lg:h-auto relative">
+                <img 
+                  src={mainCard.image} 
+                  alt={mainCard.title}
+                  className="absolute inset-0 w-full h-full object-cover rounded-2xl lg:rounded-none m-4 lg:m-0 w-[calc(100%-2rem)] lg:w-full h-[calc(100%-2rem)] lg:h-full"
+                />
+              </div>
             </div>
-          </div>
+          </motion.div>
+        )}
 
-          {/* Right Column: Staggered Steps */}
-          <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-6">
-            {steps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
-                  className="group relative bg-zinc-900 border border-zinc-800 p-8 md:p-12 transition-colors duration-500 hover:border-zinc-600 hover:bg-zinc-800/80"
-                >
-                  {/* Giant Number Watermark */}
-                  <div className="absolute right-6 bottom-2 text-[180px] leading-none font-black text-zinc-800/30 select-none transition-transform duration-700 group-hover:scale-105 origin-bottom-right">
-                    0{index + 1}
-                  </div>
-
-                  <div className="relative z-10 flex flex-col items-start gap-8">
-                    <div className="p-4 bg-zinc-950 border border-zinc-800 text-white group-hover:bg-white group-hover:text-zinc-950 transition-colors duration-500">
-                      <Icon className="w-6 h-6" strokeWidth={1.5} />
-                    </div>
-
-                    <div className="max-w-md">
-                      <h3 className="text-2xl font-bold mb-4 font-headline tracking-wide">{step.title}</h3>
-                      <p className="text-zinc-400 leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-            
-            {/* Mobile CTA */}
-             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="lg:hidden mt-8"
-              >
-                 <a href="#contato" className="flex items-center justify-center w-full px-8 py-5 bg-white text-zinc-950 font-bold uppercase tracking-widest text-sm hover:bg-zinc-200 transition-colors duration-300">
-                    Agendar Avaliação
-                 </a>
-              </motion.div>
-          </div>
-
+        {/* GRID CARDS */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {gridCards.map((card, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: index === 0 ? 0 : 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 flex flex-col"
+            >
+              <div className="h-64 relative">
+                <img 
+                  src={card.image} 
+                  alt={card.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-8 lg:p-12">
+                <span className="text-xs font-bold uppercase tracking-widest text-secondary mb-4 block">
+                  {card.badge}
+                </span>
+                <h3 className="text-2xl lg:text-3xl font-bold text-primary mb-6">
+                  {card.title}
+                </h3>
+                <p className="text-on-surface-variant text-base leading-relaxed mb-8">
+                  {card.description}
+                </p>
+                <ul className="space-y-4">
+                  {card.bullets.map((bullet, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-on-surface-variant">
+                      <div className="bg-green-100 p-1 rounded-full shrink-0">
+                        <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
+                      </div>
+                      <span className="font-medium">{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
         </div>
+
       </div>
     </section>
   );

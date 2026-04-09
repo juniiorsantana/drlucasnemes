@@ -3,8 +3,8 @@ import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
-import HowItWorks from "@/components/sections/HowItWorks";
 import Technology from "@/components/sections/Technology";
+import HowItWorks from "@/components/sections/HowItWorks";
 import Clinic from "@/components/sections/Clinic";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -51,8 +51,8 @@ export default function Home() {
         <Hero />
         <Services />
         <About />
-        <HowItWorks />
         <Technology />
+        <HowItWorks />
         <Clinic />
         <FAQ />
         <FinalCTA />
