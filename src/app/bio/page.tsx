@@ -72,42 +72,26 @@ export default function BioPage() {
           </p>
         </div>
 
-        {/* ── Specialty badges ──────────────────────────── */}
-        <div className="flex flex-wrap justify-center gap-1.5">
-          {specialties.map((s) => (
-            <span
-              key={s}
-              className="px-2.5 py-1 rounded-full bg-white border border-[#CBD5E0] text-[#0D1B4B] text-xs font-medium"
-            >
-              {s}
-            </span>
-          ))}
-        </div>
-
         {/* ── Bento Grid ────────────────────────────────── */}
         <div className="w-full grid grid-cols-2 gap-3">
 
-          {/* Agendar — destaque full-width */}
+          {/* Agendar — destaque full-width (Sutil) */}
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="col-span-2 flex items-center gap-4 px-5 py-4 rounded-2xl bg-[#25D366] text-white shadow-[0_6px_24px_rgba(37,211,102,0.35)] hover:shadow-[0_10px_36px_rgba(37,211,102,0.5)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            className="col-span-2 flex items-center gap-4 px-5 py-4 rounded-2xl bg-white border border-[#CBD5E0] text-[#0D1B4B] shadow-sm hover:border-[#164ea3] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
           >
-            <div className="w-8 h-8 shrink-0 relative flex items-center justify-center">
-              <Image 
-                src="/agende.png" 
-                alt="Agendar" 
-                width={50} 
-                height={50} 
-                className="object-contain"
-              />
+            <div className="w-10 h-10 shrink-0 relative flex items-center justify-center">
+              <span className="material-symbols-outlined text-[32px] text-[#25D366]">
+                chat
+              </span>
             </div>
             <div className="flex-1">
-              <p className="font-bold text-sm leading-tight">Agendar Consulta</p>
-              <p className="text-white/75 text-xs mt-0.5">Resposta rápida via WhatsApp</p>
+              <p className="font-bold text-sm leading-tight text-[#0D1B4B]">Agendar Consulta</p>
+              <p className="text-[#6B7280] text-xs mt-0.5">Resposta rápida via WhatsApp</p>
             </div>
-            <span className="material-symbols-outlined text-lg opacity-60 shrink-0">chevron_right</span>
+            <span className="material-symbols-outlined text-lg opacity-40 shrink-0">chevron_right</span>
           </a>
 
           {/* Site — meia largura */}
