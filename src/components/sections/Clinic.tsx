@@ -30,7 +30,7 @@ export default function Clinic() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="lg:col-span-5 flex flex-col justify-center px-8 lg:px-12 py-10 overflow-y-auto"
+          className="lg:col-span-5 flex flex-col justify-center px-8 lg:px-12 py-10"
         >
           {/* Badge */}
           <span className="inline-block bg-primary text-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5 w-fit">
