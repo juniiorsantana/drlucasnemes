@@ -27,12 +27,13 @@ export const RQE = "RQE 7982";
 
 // Navigation Links
 export const NAV_LINKS = [
-  { label: "Início", href: "#" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Especialidades", href: "#servicos" },
-  { label: "Tecnologia", href: "#tecnologia" },
-  { label: "Clínica", href: "#clinica" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Início", href: "/#" },
+  { label: "Sobre", href: "/#sobre" },
+  { label: "Especialidades", href: "/#servicos" },
+  { label: "Tecnologia", href: "/#tecnologia" },
+  { label: "Clínica", href: "/#clinica" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Blog", href: "/blog" },
 ] as const;
 
 // Services
