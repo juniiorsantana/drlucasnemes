@@ -37,10 +37,10 @@ const CARDS = [
     id: 5,
     title: "Teste Respiratório de Hidrogênio e Metano",
     description:
-      "Identificamos com precisão a presença de SIBO (supercrescimento bacteriano no intestino delgado) e intolerâncias alimentares como lactose e frutose. O exame analisa os gases expirados após ingestão de substrato específico, revelando desequilíbrios que sabotam sua digestão, energia e composição corporal.",
-    image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&q=80",
+      "Identificamos com precisão a presença de SIBO (supercrescimento bacteriano no intestino delgado) e intolerâncias alimentares como lactose e frutose.",
+    image: "/teste-respiratorio-1018x1024.webp",
     tag: "Diagnóstico intestinal avançado",
-    learnMoreUrl: "#",
+    learnMoreUrl: "#https://www.drlucasnemes.com.br/blog/teste-respiratorio-de-hidrogenio-e-metano",
   },
 ];
 
