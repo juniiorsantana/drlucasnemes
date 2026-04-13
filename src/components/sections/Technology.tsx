@@ -33,6 +33,15 @@ const CARDS = [
       "Integramos todos os dados para criar um plano estratégico totalmente personalizado, focado em corrigir a raiz do problema e acelerar seus resultados.",
     image: "/biologix-em-cuiaba.avif",
   },
+  {
+    id: 5,
+    title: "Teste Respiratório de Hidrogênio e Metano",
+    description:
+      "Identificamos com precisão a presença de SIBO (supercrescimento bacteriano no intestino delgado) e intolerâncias alimentares como lactose e frutose. O exame analisa os gases expirados após ingestão de substrato específico, revelando desequilíbrios que sabotam sua digestão, energia e composição corporal.",
+    image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&q=80",
+    tag: "Diagnóstico intestinal avançado",
+    learnMoreUrl: "#",
+  },
 ];
 
 export default function TechnologyStack() {
@@ -57,7 +66,7 @@ export default function TechnologyStack() {
         </div>
 
         {/* STACK — funciona em mobile e desktop */}
-        <div className="h-[calc(360px*4+80px*3)] lg:h-[2200px] relative">
+        <div className="h-[calc(360px*5+80px*4)] lg:h-[2750px] relative">
           {CARDS.map((card, index) => (
             <div
               key={card.id}
@@ -101,6 +110,14 @@ export default function TechnologyStack() {
                     <p className={`mt-2 text-sm ${card.highlight ? "opacity-85" : "text-gray-500"}`}>
                       {card.description}
                     </p>
+                    {card.learnMoreUrl && (
+                      <a
+                        href={card.learnMoreUrl}
+                        className="inline-block mt-4 text-sm font-semibold px-5 py-2 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors"
+                      >
+                        Saber mais
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -130,6 +147,14 @@ export default function TechnologyStack() {
                     <p className={`mt-4 ${card.highlight ? "opacity-85" : "text-gray-500"}`}>
                       {card.description}
                     </p>
+                    {card.learnMoreUrl && (
+                      <a
+                        href={card.learnMoreUrl}
+                        className="inline-block mt-6 w-fit text-sm font-semibold px-6 py-3 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors"
+                      >
+                        Saber mais
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
