@@ -11,7 +11,7 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURICo
 
 // Clinic Information
 export const CLINIC_NAME = "Clínica HiperbáricaMT";
-export const CLINIC_ADDRESS = "R. das Begônias, 615 (Anexo B), Jardim Cuiabá";
+export const CLINIC_ADDRESS = "Gastro MT (Anexo HMT). das Begônias, 615 (Anexo B), Jardim Cuiabá";
 export const CLINIC_CITY = "Cuiabá";
 export const CLINIC_STATE = "MT";
 export const CLINIC_POSTAL_CODE = "78043-112";

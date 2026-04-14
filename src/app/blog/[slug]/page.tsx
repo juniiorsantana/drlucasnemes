@@ -84,6 +84,35 @@ async function getPostData(slug: string) {
   };
 }
 
+async function getRelatedPosts(currentSlug: string, currentTags: string[]) {
+  if (!fs.existsSync(postsDirectory)) return [];
+
+  const files = fs.readdirSync(postsDirectory).filter((f) => f.endsWith('.mdx'));
+
+  const related: { slug: string; title: string; readingTime: string; coverImage: string }[] = [];
+
+  for (const file of files) {
+    const slug = file.replace(/\.mdx$/, '');
+    if (slug === currentSlug) continue;
+
+    const fileContents = fs.readFileSync(path.join(postsDirectory, file), 'utf8');
+    const { data } = matter(fileContents);
+    const tags: string[] = data.tags ?? [];
+
+    const hasSharedTag = tags.some((tag) => currentTags.includes(tag));
+    if (hasSharedTag) {
+      related.push({
+        slug,
+        title: data.title,
+        readingTime: data.readingTime,
+        coverImage: data.coverImage,
+      });
+    }
+  }
+
+  return related;
+}
+
 function extractHeadings(content: string) {
   const regex = /^##\s+(.+)$/gm;
   const headings: { id: string; text: string }[] = [];
@@ -156,6 +185,7 @@ export default async function BlogPostPage({
     post.frontmatter;
 
   const headings = extractHeadings(post.content);
+  const relatedPosts = await getRelatedPosts(slug, post.frontmatter.tags ?? []);
 
   const formattedDate = new Date(date).toLocaleDateString('pt-BR', {
     day: '2-digit',

@@ -21,32 +21,11 @@ interface ArticleSidebarProps {
   relatedPosts: RelatedPost[];
 }
 
-const MOCK_RELATED: RelatedPost[] = [
-  {
-    slug: 'tratamento-artrose-joelho',
-    title: 'Tratamento moderno para artrose do joelho',
-    readingTime: '5 min',
-    coverImage: '/images/blog/artrose-joelho.jpg',
-  },
-  {
-    slug: 'recuperacao-pos-cirurgia',
-    title: 'Como acelerar a recuperação pós-cirurgia ortopédica',
-    readingTime: '7 min',
-    coverImage: '/images/blog/recuperacao.jpg',
-  },
-  {
-    slug: 'lesoes-esportivas-prevencao',
-    title: 'Prevenção de lesões esportivas: guia completo',
-    readingTime: '6 min',
-    coverImage: '/images/blog/lesoes.jpg',
-  },
-];
-
 export default function ArticleSidebar({ headings, relatedPosts }: ArticleSidebarProps) {
   const [activeId, setActiveId] = useState<string>('');
   const observerRef = useRef<IntersectionObserver | null>(null);
 
-  const posts = relatedPosts.length > 0 ? relatedPosts : MOCK_RELATED;
+  const posts = relatedPosts;
 
   useEffect(() => {
     if (headings.length === 0) return;
@@ -112,6 +91,7 @@ export default function ArticleSidebar({ headings, relatedPosts }: ArticleSideba
       )}
 
       {/* Related Posts */}
+      {posts.length > 0 && (
       <div className="bg-surface-container-lowest rounded-2xl border border-outline/10 p-5">
         <h3 className="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4">
           Artigos relacionados
@@ -146,6 +126,7 @@ export default function ArticleSidebar({ headings, relatedPosts }: ArticleSideba
           ))}
         </ul>
       </div>
+      )}
     </aside>
   );
 }
