@@ -69,9 +69,9 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/dr-lucas-nemes-og.avif`],
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/icon-lucasnemes.svg",
+    shortcut: "/icon-lucasnemes.svg",
+    apple: "/icon-lucasnemes.svg",
   },
   alternates: {
     canonical: SITE_URL,
