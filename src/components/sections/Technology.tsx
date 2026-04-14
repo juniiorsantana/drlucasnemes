@@ -40,7 +40,7 @@ const CARDS = [
       "Identificamos com precisão a presença de SIBO (supercrescimento bacteriano no intestino delgado) e intolerâncias alimentares como lactose e frutose.",
     image: "/teste-respiratorio-1018x1024.webp",
     tag: "Diagnóstico intestinal avançado",
-    learnMoreUrl: "#https://www.drlucasnemes.com.br/blog/teste-respiratorio-de-hidrogenio-e-metano",
+    learnMoreUrl: "https://www.drlucasnemes.com.br/blog/teste-respiratorio-de-hidrogenio-e-metano",
   },
 ];
 

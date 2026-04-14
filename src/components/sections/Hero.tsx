@@ -31,7 +31,7 @@ export default function Hero() {
 
           <h1 className="text-3xl lg:text-4xl font-headline font-extrabold text-on-background leading-[1.05] tracking-tight">
             Nutrólogo em Cuiabá: <br />
-            <span className="text-primary">Elimine o Cansaço</span> e Transforme Seu Corpo com Acompanhamento Médico Especializado!
+            <span className="text-primary">Alcance a saúde plena</span> e Transforme Seu Corpo com Acompanhamento Médico Especializado!
           </h1>
 
           <h2 className="text-xl lg:text-2xl font-headline font-semibold text-on-surface-variant max-w-lg leading-relaxed">

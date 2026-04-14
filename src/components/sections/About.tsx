@@ -21,7 +21,7 @@ export default function About() {
             className="relative w-full h-[560px] rounded-3xl overflow-hidden shadow-xl"
           >
             <Image
-              src="/Quem sou.avif"
+              src="/novo-about.jpg"
               alt="Dr. Lucas Nemes"
               fill
               className="object-cover object-top"

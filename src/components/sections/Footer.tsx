@@ -23,7 +23,7 @@ export default function Footer() {
           {/* Col 1: Identity */}
           <div className="space-y-2">
             <Image
-              src="/Logo-light.png"
+              src="/logo_light.svg"
               alt="Dr. Lucas Nemes"
               width={72}
               height={24}

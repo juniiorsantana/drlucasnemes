@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
         <div className="flex items-center gap-2">
           <Image
-            src="/logo-azul.png"
+            src="/logo-blue.svg"
             alt="Dr. Lucas Nemes"
             width={72}
             height={24}
