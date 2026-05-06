@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { trackWhatsAppConversion } from "@/lib/analytics";
 
 export default function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -55,6 +56,8 @@ export default function WhatsAppButton() {
 
       // fecha automático no mobile
       setTimeout(() => setIsExpanded(false), 4000);
+    } else {
+      trackWhatsAppConversion();
     }
   };
 

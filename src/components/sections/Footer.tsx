@@ -1,3 +1,5 @@
+"use client";
+
 import {
   DOCTOR_NAME,
   DOCTOR_SPECIALTY,
@@ -13,6 +15,7 @@ import {
   NAV_LINKS,
   SOCIAL_LINKS,
 } from "@/lib/constants";
+import { trackWhatsAppConversion } from "@/lib/analytics";
 import Image from "next/image";
 
 export default function Footer() {
@@ -77,6 +80,7 @@ export default function Footer() {
                 key={link.platform}
                 href={link.url}
                 title={link.label}
+                onClick={link.platform === 'whatsapp' ? trackWhatsAppConversion : undefined}
                 className="w-10 h-10 rounded-full bg-on-primary-container/20 flex items-center justify-center text-on-primary hover:bg-on-primary hover:text-primary transition-colors"
               >
                 <span className="material-symbols-outlined">{link.icon}</span>
