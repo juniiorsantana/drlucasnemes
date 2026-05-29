@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { NAV_LINKS, WHATSAPP_URL, CRM } from "@/lib/constants";
+import { trackWhatsAppConversion } from "@/lib/analytics";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 
@@ -64,6 +65,7 @@ export default function Navbar() {
             variant={isScrolled ? "primary" : "premium"}
             size="sm"
             className="hidden md:flex"
+            onLinkClick={trackWhatsAppConversion}
           >
             Agendar Consulta
           </Button>
@@ -92,7 +94,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button href={WHATSAPP_URL} variant="primary" size="md">
+            <Button href={WHATSAPP_URL} variant="primary" size="md" onLinkClick={trackWhatsAppConversion}>
               Agendar Consulta
             </Button>
           </div>

@@ -6,6 +6,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   href?: string;
   icon?: React.ReactNode;
+  onLinkClick?: () => void;
 }
 
 export default function Button({
@@ -14,6 +15,7 @@ export default function Button({
   children,
   href,
   icon,
+  onLinkClick,
   className = "",
   ...props
 }: ButtonProps) {
@@ -76,7 +78,7 @@ export default function Button({
 
   if (href) {
     return (
-      <a href={href} className={combinedClassName}>
+      <a href={href} className={combinedClassName} onClick={onLinkClick}>
         {buttonContent}
       </a>
     );

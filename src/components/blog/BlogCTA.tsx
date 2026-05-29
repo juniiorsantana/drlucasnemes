@@ -1,3 +1,7 @@
+"use client";
+
+import { trackWhatsAppConversion } from "@/lib/analytics";
+
 interface BlogCTAProps {
   message?: string;
 }
@@ -39,6 +43,7 @@ export default function BlogCTA({
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackWhatsAppConversion}
             className="flex-shrink-0 inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_4px_20px_rgba(37,211,102,0.35)] transition-all duration-300 hover:shadow-[0_6px_28px_rgba(37,211,102,0.55)] hover:-translate-y-0.5 active:scale-95 whitespace-nowrap"
           >
             <svg className="w-5 h-5 fill-white flex-shrink-0" viewBox="0 0 24 24">
