@@ -19,17 +19,18 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all ${isScrolled ? "glass-nav shadow-sm" : "bg-transparent"
-        }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "glass-nav shadow-sm" : "bg-transparent"
+      }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
         <div className="flex items-center gap-2">
           <Image
-            src="/logo-blue.svg"
+            src={isScrolled ? "/logo-blue.svg" : "/logo_light.svg"}
             alt="Dr. Lucas Nemes"
             width={72}
             height={24}
-            className="h-6 w-auto object-contain"
+            className="h-6 w-auto object-contain transition-opacity duration-300"
             priority
           />
         </div>
@@ -39,25 +40,37 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-on-surface-variant hover:text-secondary transition-colors"
+              className={`transition-colors duration-300 ${
+                isScrolled
+                  ? "text-on-surface-variant hover:text-secondary"
+                  : "text-white/85 hover:text-white"
+              }`}
             >
               {link.label}
             </a>
           ))}
-          <span className="text-outline">{CRM}</span>
+          <span
+            className={`transition-colors duration-300 text-xs font-label tracking-wider ${
+              isScrolled ? "text-outline" : "text-white/45"
+            }`}
+          >
+            {CRM}
+          </span>
         </div>
 
         <div className="flex items-center gap-4">
           <Button
             href={WHATSAPP_URL}
-            variant="primary"
+            variant={isScrolled ? "primary" : "premium"}
             size="sm"
             className="hidden md:flex"
           >
             Agendar Consulta
           </Button>
           <button
-            className="md:hidden text-primary"
+            className={`md:hidden transition-colors duration-300 ${
+              isScrolled ? "text-primary" : "text-white"
+            }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="material-symbols-outlined">menu</span>
