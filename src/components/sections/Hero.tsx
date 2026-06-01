@@ -26,7 +26,7 @@ export default function Hero() {
           fill
           priority
           quality={90}
-          className="object-cover object-center lg:hidden"
+          className="object-cover object-top lg:hidden"
         />
         {/* Desktop */}
         <Image
@@ -38,7 +38,7 @@ export default function Hero() {
           className="object-cover object-center hidden lg:block"
         />
         {/* Mobile: gradiente de baixo para cima */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080f2a]/60 via-[#080f2a]/30 to-transparent lg:hidden" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080f2a]/90 via-[#080f2a]/55 to-[#080f2a]/10 lg:hidden" />
         {/* Desktop: gradiente começa na direita e some antes da foto */}
         <div
           className="absolute inset-0 hidden lg:block"
@@ -94,14 +94,39 @@ export default function Hero() {
       </div>
 
       {/* Conteúdo */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-16 lg:pb-0 pt-32 lg:pt-20 flex flex-col lg:flex-row lg:justify-end items-center lg:items-center text-center lg:text-left">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-16 lg:pb-0 pt-20 lg:pt-20 flex flex-col lg:flex-row lg:justify-end items-center lg:items-center text-center lg:text-left">
         <div className="w-full max-w-[420px] lg:mr-[13%] space-y-5 animate-fade-up">
 
           {/* Badge de identidade */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/[0.07] border border-white/[0.13] backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#7FB3E8] animate-pulse shrink-0" />
-            <span className="font-label text-[10.5px] font-bold uppercase tracking-[0.16em] text-white/65">
-              DR. LUCAS NEMES · {CRM} · {RQE}
+          <div
+            className="inline-flex items-center gap-3 px-4 py-2.5 rounded-full"
+            style={{
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(127,179,232,0.2)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+            }}
+          >
+            {/* Ícone verificado */}
+            <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5 shrink-0 text-[#7FB3E8]">
+              <path d="M8 1l1.8 2.2 2.7-.7-.7 2.7L14 7l-2.2 1 .7 2.7-2.7-.7L8 12.3 6.2 10l-2.7.7.7-2.7L2 7l2.2-1.8-.7-2.7 2.7.7L8 1z" fill="currentColor" opacity="0.3"/>
+              <path d="M6 8l1.5 1.5 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+
+            {/* Nome */}
+            <span className="font-label text-[11px] font-bold uppercase tracking-[0.14em] text-white/90">
+              Dr. Lucas Nemes
+            </span>
+
+            {/* Separador */}
+            <span className="w-px h-3 bg-white/20 shrink-0" />
+
+            {/* Credenciais */}
+            <span className="font-label text-[9.5px] font-medium uppercase tracking-[0.12em] text-white/40">
+              {CRM}
+            </span>
+            <span className="font-label text-[9.5px] font-medium uppercase tracking-[0.12em] text-[#7FB3E8]/60">
+              {RQE}
             </span>
           </div>
 
@@ -111,7 +136,7 @@ export default function Hero() {
           </p>
 
           {/* Headline principal */}
-          <h1 className="text-[1.5rem] sm:text-[1.85rem] lg:text-[2.1rem] font-headline font-extrabold text-white leading-[1.1] tracking-tight">
+          <h1 className="text-[1.3rem] sm:text-[1.85rem] lg:text-[2.1rem] font-headline font-extrabold text-white leading-[1.15] tracking-tight">
             <span className="text-[#7FB3E8]">Alcance a saúde plena</span>{" "}
             e Transforme Seu Corpo com Acompanhamento Médico Especializado
           </h1>

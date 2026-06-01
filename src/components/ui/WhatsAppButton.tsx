@@ -10,34 +10,37 @@ export default function WhatsAppButton() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Detecta mobile
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
-    // Delay inicial
-    const timer = setTimeout(() => {
-      setIsVisible(true);
+    let expandTimer: ReturnType<typeof setTimeout> | null = null;
 
-      // Auto expand (aumenta conversão)
-      setTimeout(() => {
-        setIsExpanded(true);
+    const handleScroll = () => {
+      const threshold = window.innerHeight * 2;
+      const pastSecondSection = window.scrollY > threshold;
 
-        // Fecha depois (pra não ficar poluído)
-        setTimeout(() => {
-          setIsExpanded(false);
-        }, 4000);
-      }, 1200);
-    }, 1200);
+      if (pastSecondSection && !isVisible) {
+        setIsVisible(true);
+
+        expandTimer = setTimeout(() => {
+          setIsExpanded(true);
+          setTimeout(() => setIsExpanded(false), 4000);
+        }, 600);
+      } else if (!pastSecondSection) {
+        setIsVisible(false);
+        setIsExpanded(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      clearTimeout(timer);
       window.removeEventListener("resize", checkMobile);
+      window.removeEventListener("scroll", handleScroll);
+      if (expandTimer) clearTimeout(expandTimer);
     };
-  }, []);
+  }, [isVisible]);
 
   // Hover desktop
   const handleMouseEnter = () => {

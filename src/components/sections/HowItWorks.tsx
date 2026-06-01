@@ -15,7 +15,7 @@ const HOW_IT_WORKS = [
       "Redução do estresse e da fadiga",
       "Controle de peso"
     ],
-    image: "/Quem sou.avif",
+    image: "/drlucasnemes1.jpg",
   },
   {
     type: "grid",

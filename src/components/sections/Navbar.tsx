@@ -62,9 +62,9 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Button
             href={WHATSAPP_URL}
-            variant={isScrolled ? "primary" : "premium"}
+            variant="primary"
             size="sm"
-            className="hidden md:flex"
+            className={`hidden md:flex transition-opacity duration-300 ${isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             onLinkClick={trackWhatsAppConversion}
           >
             Agendar Consulta

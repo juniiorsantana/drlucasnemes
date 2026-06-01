@@ -21,7 +21,7 @@ export default function About() {
             className="relative w-full h-[560px] rounded-3xl overflow-hidden shadow-xl"
           >
             <Image
-              src="/FotoDrLucas.avif"
+              src="/drlucasnemes2.avif"
               alt="Dr. Lucas Nemes"
               fill
               className="object-cover object-top"
@@ -52,7 +52,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="space-y-5 text-on-surface-variant leading-relaxed text-base lg:text-lg">
+            <div className="space-y-5 text-on-surface-variant leading-relaxed text-sm lg:text-base">
               <p>
                 Dr. Lucas Nemes, graduado em Medicina pela UFMT e Especialista em
                 Nutrologia pela ABRAN/AMB, é referência no tratamento da obesidade
