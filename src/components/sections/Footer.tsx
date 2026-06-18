@@ -20,7 +20,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-on-primary py-16">
+    <footer className="bg-primary-container text-on-primary-container py-16">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
           {/* Col 1: Identity */}
@@ -81,7 +81,7 @@ export default function Footer() {
                 href={link.url}
                 title={link.label}
                 onClick={link.platform === 'whatsapp' ? trackWhatsAppConversion : undefined}
-                className="w-10 h-10 rounded-full bg-on-primary-container/20 flex items-center justify-center text-on-primary hover:bg-on-primary hover:text-primary transition-colors"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-on-primary-container hover:bg-white/20 hover:text-white transition-colors"
               >
                 <span className="material-symbols-outlined">{link.icon}</span>
               </a>

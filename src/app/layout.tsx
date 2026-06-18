@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { DOCTOR_NAME, CLINIC_NAME, SITE_URL, SEO_KEYWORDS } from "@/lib/constants";
@@ -8,12 +8,6 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-});
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -81,6 +75,7 @@ export const metadata: Metadata = {
 };
 
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { THEME } from "@/lib/constants";
 
 export default function RootLayout({
   children,
@@ -90,7 +85,8 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${manrope.variable}`}
+      data-theme={THEME}
+      className={`${inter.variable}`}
       suppressHydrationWarning
     >
       <head>

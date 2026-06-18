@@ -24,20 +24,21 @@ export default function Button({
 
   const variantStyles = {
     primary: [
-      "bg-gradient-to-r from-[#164ea3] to-[#2563C2] text-white",
-      "shadow-[0_6px_30px_rgba(22,78,163,0.35)]",
-      "hover:shadow-[0_10px_40px_rgba(22,78,163,0.55)]",
-      "hover:-translate-y-1 active:scale-95",
-      "focus:ring-[#164ea3]",
+      "bg-cta-bg text-cta-text",
+      "hover:opacity-90 active:scale-95",
+      "focus:ring-heading",
     ].join(" "),
     secondary: [
-      "bg-[#0d1b4b] text-white",
-      "shadow-md hover:shadow-lg",
-      "hover:-translate-y-1 active:scale-95",
-      "focus:ring-[#0d1b4b]",
+      "bg-elevated text-accent",
+      "border border-subtle",
+      "hover:border-subtle-muted active:scale-95",
+      "focus:ring-subtle",
     ].join(" "),
-    ghost:
-      "bg-transparent text-[#164ea3] hover:bg-[#164ea3]/10 focus:ring-[#164ea3]",
+    ghost: [
+      "bg-transparent text-body",
+      "hover:text-heading",
+      "focus:ring-subtle",
+    ].join(" "),
     premium: [
       "bg-white text-primary",
       "shadow-[0_8px_32px_rgba(255,255,255,0.25)]",

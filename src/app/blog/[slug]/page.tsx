@@ -225,7 +225,7 @@ export default async function BlogPostPage({
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-5">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-heading leading-tight tracking-tight mb-5">
             {title}
           </h1>
 
@@ -271,7 +271,7 @@ export default async function BlogPostPage({
           <div className="min-w-0 border-r-0 lg:border-r border-outline/10 lg:pr-10">
             <ShareButtons title={title} url={pageUrl} />
 
-            <div className="prose prose-slate lg:prose-lg max-w-none prose-headings:text-primary prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-on-surface prose-blockquote:not-italic prose-blockquote:border-l-4 prose-blockquote:border-[#185FA5] prose-blockquote:bg-[#185FA5]/5 prose-blockquote:py-3 prose-blockquote:px-5 prose-blockquote:rounded-r-xl prose-blockquote:text-on-surface prose-img:rounded-2xl prose-img:shadow-glass prose-code:text-[#185FA5] prose-code:bg-[#185FA5]/8 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none">
+            <div className="prose prose-slate lg:prose-lg max-w-none prose-headings:text-heading prose-headings:font-semibold prose-h2:text-2xl prose-h3:text-xl prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-on-surface prose-blockquote:not-italic prose-blockquote:border-l-4 prose-blockquote:border-[#185FA5] prose-blockquote:bg-[#185FA5]/5 prose-blockquote:py-3 prose-blockquote:px-5 prose-blockquote:rounded-r-xl prose-blockquote:text-on-surface prose-img:rounded-2xl prose-img:shadow-glass prose-code:text-[#185FA5] prose-code:bg-[#185FA5]/8 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none">
               <MDXRemote
                 source={post.content}
                 options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}

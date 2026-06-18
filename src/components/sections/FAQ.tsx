@@ -10,7 +10,7 @@ export default function FAQ() {
       <div className="max-w-3xl mx-auto px-8">
         <div className="mb-16 text-center">
           <SectionLabel>PERGUNTAS FREQUENTES</SectionLabel>
-          <h2 className="text-4xl font-headline font-extrabold text-primary tracking-tight mt-4">
+          <h2 className="text-4xl font-headline font-semibold text-heading tracking-tight mt-4">
             Tire Suas Dúvidas
           </h2>
         </div>
@@ -23,7 +23,7 @@ export default function FAQ() {
               className="bg-surface-container-lowest border border-outline-variant/10 rounded-lg overflow-hidden"
             >
               <Accordion.Trigger className="w-full px-6 py-4 flex items-center justify-between hover:bg-surface-container-low transition-colors text-left">
-                <h3 className="text-base font-label font-bold text-primary">
+                <h3 className="text-base font-label font-semibold text-heading">
                   {item.question}
                 </h3>
                 <span className="material-symbols-outlined ml-4 shrink-0 text-secondary">

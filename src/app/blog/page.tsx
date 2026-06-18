@@ -65,7 +65,7 @@ export default async function BlogIndexPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <header className="max-w-3xl mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6 headline leading-tight">
+            <h1 className="text-4xl md:text-5xl font-semibold text-heading mb-6 headline leading-tight">
               Saúde, Performance e <span className="text-secondary">Conhecimento</span>
             </h1>
             <p className="text-lg text-on-surface-variant leading-relaxed">
@@ -98,7 +98,7 @@ export default async function BlogIndexPage() {
                         <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-[11px] font-bold uppercase tracking-widest rounded-full mb-6">
                           {featuredPost.frontmatter.category}
                         </span>
-                        <h2 className="text-3xl font-bold text-primary mb-5 group-hover:text-secondary transition-colors line-clamp-2 headline">
+                        <h2 className="text-3xl font-semibold text-heading mb-5 group-hover:text-secondary transition-colors line-clamp-2 headline">
                           {featuredPost.frontmatter.title}
                         </h2>
                         <p className="text-on-surface-variant line-clamp-3 mb-8 text-lg leading-relaxed">
@@ -106,12 +106,12 @@ export default async function BlogIndexPage() {
                         </p>
                         <div className="flex flex-wrap items-center justify-between gap-6 pt-4 border-t border-outline/5">
                           <div className="flex items-center gap-4 text-sm text-outline font-medium">
-                            <span className="flex items-center gap-1.5 hover:text-primary transition-colors cursor-default">
+                            <span className="flex items-center gap-1.5 hover:text-accent transition-colors cursor-default">
                               <span className="material-symbols-outlined text-base">person</span>
                               {featuredPost.frontmatter.author}
                             </span>
                             <span className="w-px h-4 bg-outline/20" />
-                            <span className="flex items-center gap-1.5 hover:text-primary transition-colors cursor-default">
+                            <span className="flex items-center gap-1.5 hover:text-accent transition-colors cursor-default">
                               <span className="material-symbols-outlined text-base">calendar_today</span>
                               {new Date(featuredPost.frontmatter.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
                             </span>
@@ -130,7 +130,7 @@ export default async function BlogIndexPage() {
               {remainingPosts.length > 0 && (
                 <section>
                   <div className="flex items-center gap-4 mb-10">
-                    <h3 className="text-xl font-bold text-primary uppercase tracking-widest text-sm">Mais Artigos</h3>
+                    <h3 className="text-xl font-semibold text-heading uppercase tracking-widest text-sm">Mais Artigos</h3>
                     <div className="h-px flex-1 bg-outline/10" />
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -152,7 +152,7 @@ export default async function BlogIndexPage() {
                           <span className="text-[10px] font-bold text-secondary uppercase tracking-widest mb-4">
                             {post.frontmatter.category}
                           </span>
-                          <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors line-clamp-2 headline">
+                          <h4 className="text-xl font-semibold text-heading mb-4 group-hover:text-secondary transition-colors line-clamp-2 headline">
                             {post.frontmatter.title}
                           </h4>
                           <p className="text-sm text-on-surface-variant line-clamp-3 mb-8 flex-1 leading-relaxed">

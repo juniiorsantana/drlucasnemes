@@ -60,7 +60,7 @@ export default function TechnologyStack() {
           <p className="text-xs font-semibold uppercase tracking-widest text-secondary">
             Como Avaliamos
           </p>
-          <h2 className="text-4xl font-extrabold text-primary mt-2 leading-tight">
+          <h2 className="text-4xl font-semibold text-heading mt-2 leading-tight tracking-tight">
             Diagnóstico de Precisão com Tecnologia de Última Geração
           </h2>
         </div>
@@ -82,7 +82,7 @@ export default function TechnologyStack() {
                   border transition-all duration-300
                   ${card.highlight
                     ? "bg-primary text-white border-transparent shadow-2xl"
-                    : "bg-white text-primary border-gray-100 shadow-lg"
+                    : "bg-surface-container-high text-heading border-outline-variant/30 shadow-lg"
                   }
                 `}
               >
@@ -98,7 +98,7 @@ export default function TechnologyStack() {
                       className={`inline-block text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2 ${
                         card.highlight
                           ? "bg-white/10 text-white/70"
-                          : "bg-gray-100 text-gray-400"
+                          : "bg-primary-fixed text-on-primary-fixed"
                       }`}
                     >
                       0{card.id}
@@ -107,7 +107,7 @@ export default function TechnologyStack() {
                     {card.tag && (
                       <p className="text-xs mt-1 uppercase opacity-70">{card.tag}</p>
                     )}
-                    <p className={`mt-2 text-sm ${card.highlight ? "opacity-85" : "text-gray-500"}`}>
+                    <p className={`mt-2 text-sm ${card.highlight ? "opacity-85" : "text-on-surface-variant"}`}>
                       {card.description}
                     </p>
                     {card.learnMoreUrl && (
@@ -135,7 +135,7 @@ export default function TechnologyStack() {
                       className={`inline-block text-xs font-semibold px-3 py-1 rounded-md w-fit mb-3 ${
                         card.highlight
                           ? "bg-white/10 text-white/70"
-                          : "bg-gray-100 text-gray-400"
+                          : "bg-primary-fixed text-on-primary-fixed"
                       }`}
                     >
                       0{card.id}
@@ -144,7 +144,7 @@ export default function TechnologyStack() {
                     {card.tag && (
                       <p className="text-xs mt-2 uppercase opacity-70">{card.tag}</p>
                     )}
-                    <p className={`mt-4 ${card.highlight ? "opacity-85" : "text-gray-500"}`}>
+                    <p className={`mt-4 ${card.highlight ? "opacity-85" : "text-on-surface-variant"}`}>
                       {card.description}
                     </p>
                     {card.learnMoreUrl && (

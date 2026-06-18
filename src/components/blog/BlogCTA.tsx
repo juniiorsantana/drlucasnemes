@@ -30,7 +30,7 @@ export default function BlogCTA({
             <p className="text-xs font-bold uppercase tracking-widest text-[#185FA5] mb-1">
               Consulta com Dr. Lucas Nemes
             </p>
-            <p className="text-lg font-bold text-primary leading-snug">
+            <p className="text-lg font-semibold text-heading leading-snug">
               Tem dúvidas ou quer solicitar o exame?
             </p>
             <p className="text-sm text-on-surface-variant mt-1">

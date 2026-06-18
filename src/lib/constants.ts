@@ -177,7 +177,7 @@ export const SOCIAL_LINKS = [
   {
     platform: "instagram",
     icon: "camera",
-    url: "#",
+    url: "https://www.instagram.com/drlucasnemes/",
     label: "Instagram",
   },
   {
@@ -204,6 +204,9 @@ export const FOOTER_LINKS = [
 // Developer Credit
 export const DEVELOPER_CREDIT = "@hub.major";
 export const CURRENT_YEAR = new Date().getFullYear();
+
+// Theme — troque para "light" para voltar ao tema claro
+export const THEME: "light" | "dark" = "dark";
 
 // SEO
 export const SITE_URL = "https://www.drlucasnemes.com.br";

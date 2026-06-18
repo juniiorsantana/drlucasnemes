@@ -33,7 +33,7 @@ export default function Clinic() {
           className="lg:col-span-5 flex flex-col justify-center px-8 lg:px-12 py-10"
         >
           {/* Badge */}
-          <span className="inline-block bg-primary text-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5 w-fit">
+          <span className="inline-block bg-primary text-on-primary px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5 w-fit rounded-full">
             Onde Atendo
           </span>
 
@@ -47,13 +47,13 @@ export default function Clinic() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.1] font-headline text-primary tracking-tight">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold leading-[1.1] font-headline text-heading tracking-tight">
             Estrutura completa para{" "}
-            <span className="font-light italic text-secondary">alta performance.</span>
+            <span className="font-normal italic text-accent">alta performance.</span>
           </h2>
 
           {/* Subtext */}
-          <p className="text-on-surface-variant text-sm lg:text-base leading-relaxed mt-3">
+          <p className="text-on-surface-variant text-[14px] lg:text-[16px] leading-relaxed mt-3">
             Especializado na {CLINIC_NAME} — um ambiente pensado em cada detalhe para conforto, privacidade e precisão diagnóstica.
           </p>
 
@@ -97,7 +97,7 @@ export default function Clinic() {
             href={`https://maps.google.com/?q=${encodeURIComponent(CLINIC_ADDRESS)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-6 text-sm font-bold uppercase tracking-widest text-primary hover:text-secondary transition-colors group"
+            className="inline-flex items-center gap-2 mt-6 text-sm font-semibold uppercase tracking-widest text-accent hover:text-heading transition-colors group"
           >
             
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" strokeWidth={2} />

@@ -1,136 +1,102 @@
 "use client";
 
-import { useState } from "react";
-import { WHATSAPP_URL } from "@/lib/constants";
 import Image from "next/image";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 interface CardData {
   id: number;
   title: string;
-  subtitle: string;
   description: string;
   imageUrl: string;
+  icon: string;
 }
 
 const CARDS: CardData[] = [
   {
     id: 1,
     title: "Emagrecimento Saudável",
-    subtitle: "Abordagem simples e eficiente para resultados duradouros",
     description:
-      "Protocolos personalizados baseados no seu metabolismo real. Vamos além da balança — analisamos composição corporal, hormônios e hábitos para garantir resultados que duram.",
+      "Abordagem simples e eficiente para resultados duradouros com saúde e equilíbrio.",
     imageUrl: "/emagrecimento saudavel em cuiaba.avif",
+    icon: "⚖️",
   },
   {
     id: 2,
     title: "Longevidade e Bem-estar",
-    subtitle: "Cuidamos do seu corpo e mente para uma vida melhor",
     description:
-      "Tratamentos que equilibram energia, sono e saúde hormonal. Uma abordagem integrativa para você viver com mais qualidade, disposição e longevidade.",
+      "Cuidamos do seu corpo e mente para uma vida melhor hoje e no futuro.",
     imageUrl: "/bemestar.avif",
+    icon: "🌿",
   },
   {
     id: 3,
     title: "Alta Performance",
-    subtitle: "Máximo desempenho através da nutrição de precisão em Cuiabá-MT",
     description:
-      "Estratégias nutricionais e metabólicas para atletas e profissionais que exigem o máximo do corpo. Mais força, recuperação acelerada e foco mental.",
+      "Máximo desempenho através da nutrição de precisão e estratégias personalizadas.",
     imageUrl: "/alta-perfomance.avif",
+    icon: "🏋️",
   },
 ];
 
-function FlipCard({ card }: { card: CardData }) {
-  const [flipped, setFlipped] = useState(false);
-
+function ServiceCard({ card }: { card: CardData }) {
   return (
-    <div style={{ perspective: "1000px" }}>
-      <div
-        className="relative w-full transition-transform duration-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
-        style={{
-          height: "370px",
-          transformStyle: "preserve-3d",
-          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
-        }}
-      >
-        {/* FACE FRENTE */}
-        <div
-          className="absolute inset-0 flex flex-col rounded-2xl overflow-hidden"
-          style={{ backfaceVisibility: "hidden" }}
-        >
-          {/* Foto */}
-          <div className="relative h-44 flex-shrink-0">
-            <Image
-              src={card.imageUrl}
-              alt={card.title}
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-black/30" />
-          </div>
+    <div className="group flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#0D1220] hover:border-white/20 transition-all duration-300">
+      {/* Image */}
+      <div className="relative h-52 flex-shrink-0 overflow-hidden">
+        <Image
+          src={card.imageUrl}
+          alt={card.title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/60" />
 
-          {/* Conteúdo glass */}
-          <div
-            className="flex flex-col flex-1 p-5 justify-between border border-white/50 border-t-0 rounded-b-2xl"
-            style={{
-              background: "rgba(255,255,255,0.55)",
-              backdropFilter: "blur(16px)",
-              WebkitBackdropFilter: "blur(16px)",
-            }}
-          >
-            <div className="space-y-1.5">
-              <h3 className="text-lg font-headline font-extrabold text-primary leading-tight">
-                {card.title}
-              </h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed">
-                {card.subtitle}
-              </p>
-            </div>
+        {/* Icon badge */}
+        <div className="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-lg">
+          {card.icon}
+        </div>
+      </div>
 
-            <div className="flex justify-end mt-3">
-              <button
-                onClick={() => setFlipped(true)}
-                aria-label={`Ver mais sobre ${card.title}`}
-                className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-xl font-light leading-none shadow-[0_4px_16px_rgba(13,27,75,0.35)] hover:shadow-[0_6px_24px_rgba(13,27,75,0.5)] hover:scale-110 active:scale-95 transition-all duration-200 select-none cursor-pointer"
-              >
-                +
-              </button>
-            </div>
-          </div>
+      {/* Content */}
+      <div className="flex flex-col flex-1 p-6 justify-between gap-4">
+        <div className="space-y-2">
+          <h3 className="text-base font-headline font-semibold text-white leading-snug">
+            {card.title}
+          </h3>
+          <p className="text-white/55 text-sm leading-relaxed">
+            {card.description}
+          </p>
         </div>
 
-        {/* FACE VERSO */}
-        <div
-          className="absolute inset-0 flex flex-col rounded-2xl overflow-hidden border border-primary/20 bg-primary p-6"
-          style={{
-            backfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-          }}
-        >
-          <div className="flex flex-col flex-1 justify-between">
-            <div className="space-y-4">
-              <h3 className="text-xl font-headline font-extrabold text-white leading-tight">
-                {card.title}
-              </h3>
-              <p className="text-white/80 leading-relaxed text-sm">
-                {card.description}
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <a
-                href={WHATSAPP_URL}
-                className="w-full block text-center bg-white text-primary font-bold py-3 px-6 rounded-full text-sm shadow-[0_4px_16px_rgba(255,255,255,0.2)] hover:shadow-[0_6px_24px_rgba(255,255,255,0.35)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
-              >
-                Agendar Consulta
-              </a>
-              <button
-                onClick={() => setFlipped(false)}
-                className="w-full text-center text-white/60 text-xs hover:text-white transition-colors duration-200 py-1 cursor-pointer"
-              >
-                ← Voltar
-              </button>
-            </div>
-          </div>
+        {/* Footer */}
+        <div className="flex items-center justify-between pt-2 border-t border-white/10">
+          <a
+            href={WHATSAPP_URL}
+            className="text-white/50 text-sm hover:text-white transition-colors duration-200"
+          >
+            Saiba mais
+          </a>
+          <a
+            href={WHATSAPP_URL}
+            aria-label={`Saiba mais sobre ${card.title}`}
+            className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white/50 hover:border-white/40 hover:text-white transition-all duration-200"
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 7H11.5M11.5 7L7.5 3M11.5 7L7.5 11"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -139,26 +105,71 @@ function FlipCard({ card }: { card: CardData }) {
 
 export default function Services() {
   return (
-    <section
-      className="py-24 bg-surface-container"
-      id="nutrologia-medica-cuiaba"
-    >
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="relative py-24 bg-[#0A0E1A] overflow-hidden" id="nutrologia-medica-cuiaba">
+      {/* Dot grid */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+        }}
+      />
+
+      {/* Diagonal lines animadas */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 40px)",
+          backgroundSize: "56px 56px",
+          animation: "diag-move 18s linear infinite",
+        }}
+      />
+
+      <style>{`
+        @keyframes diag-move {
+          0%   { background-position: 0 0; }
+          100% { background-position: 56px 56px; }
+        }
+      `}</style>
+
+      <div className="relative max-w-7xl mx-auto px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-secondary bg-primary-fixed px-4 py-1.5 rounded-full">
-            Nutrologia Médica em Cuiabá
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-5">
+          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent bg-elevated border border-subtle px-4 py-1.5 rounded-full">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Nutrologia Médica Personalizada
           </span>
-          <h2 className="text-4xl font-headline font-extrabold text-primary tracking-tight">
-            Descubra como a Nutrologia médica personalizada pode transformar sua
-            qualidade de vida.
+
+          <h2 className="text-4xl font-headline font-semibold text-heading tracking-tight leading-tight">
+            Descubra como a Nutrologia médica personalizada pode transformar sua{" "}
+            <span className="text-accent">qualidade de vida.</span>
           </h2>
+
+          <p className="text-body text-base leading-relaxed">
+            Planos individualizados, baseados em ciência e tecnologia, para
+            resultados reais e duradouros.
+          </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {CARDS.map((card) => (
-            <FlipCard key={card.id} card={card} />
+            <ServiceCard key={card.id} card={card} />
           ))}
         </div>
       </div>

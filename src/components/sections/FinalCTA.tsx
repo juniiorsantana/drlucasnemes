@@ -12,7 +12,7 @@ export default function FinalCTA() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-24 bg-primary text-on-primary">
+    <section className="relative overflow-hidden py-24 bg-primary-container text-on-primary-container">
       {/* Círculos decorativos de fundo */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-white/5" />
       <div className="pointer-events-none absolute -bottom-20 -right-16 h-72 w-72 rounded-full bg-white/5" />
@@ -20,18 +20,18 @@ export default function FinalCTA() {
       <div className="relative z-10 max-w-2xl mx-auto px-8 text-center">
 
         {/* Badge de disponibilidade */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm text-on-primary/80 mb-8">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm text-on-primary-container/80 mb-8">
           <span className="h-2 w-2 rounded-full bg-emerald-400" />
           Consultas disponíveis esta semana
         </div>
 
-        <h2 className="text-4xl font-headline font-black tracking-tight leading-tight mb-5">
+        <h2 className="text-4xl font-headline font-semibold tracking-tight leading-tight mb-5">
           Pronto para transformar
           <br />
           sua saúde de verdade?
         </h2>
 
-        <p className="text-lg text-on-primary/70 leading-relaxed mb-10">
+        <p className="text-lg text-on-primary-container/70 leading-relaxed mb-10">
           Na primeira consulta, avaliamos suas metas, analisamos seus dados e
           montamos um plano personalizado. Simples, direto e eficaz.
         </p>
@@ -39,7 +39,7 @@ export default function FinalCTA() {
         {/* Mini-benefícios */}
         <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-10">
           {highlights.map((item) => (
-            <li key={item} className="flex items-center gap-2 text-sm text-on-primary/70">
+            <li key={item} className="flex items-center gap-2 text-sm text-on-primary-container/70">
               <span className="flex h-5 w-5 items-center justify-center rounded-full border border-emerald-400/50 bg-emerald-400/15 text-emerald-400 text-[10px]">
                 ✓
               </span>
@@ -63,7 +63,7 @@ export default function FinalCTA() {
           Agendar Minha Consulta Agora
         </Button>
 
-        <p className="mt-4 text-xs text-on-primary/40">
+        <p className="mt-4 text-xs text-on-primary-container/40">
           Atendimento pelo WhatsApp · Sem compromisso
         </p>
       </div>

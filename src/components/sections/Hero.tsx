@@ -53,41 +53,39 @@ export default function Hero() {
       {/* Card de credenciais glass — desktop, lado esquerdo */}
       <div className="absolute left-8 bottom-10 hidden lg:flex flex-col gap-3 z-20">
         <div
-          className="flex flex-col gap-2.5 px-5 py-4 rounded-2xl"
+          className="flex flex-col gap-2.5 px-5 py-4 rounded-2xl bg-bg-surface border border-subtle"
           style={{
-            background: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(255,255,255,0.10)",
             backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(16px)",
-            boxShadow: "0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)",
+            boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
           }}
         >
           <div className="flex items-center gap-2 mb-0.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#7FB3E8] animate-pulse shrink-0" />
-            <p className="text-white/40 text-[9px] font-label tracking-[0.2em] uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0" />
+            <p className="text-body text-[9px] font-label tracking-[0.2em] uppercase">
               Credenciais Médicas
             </p>
           </div>
 
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2">
-              <span className="text-white/20 text-[9px] font-label uppercase tracking-widest w-8">CRM</span>
-              <span className="text-white font-headline font-bold text-sm leading-none">
+              <span className="text-body text-[9px] font-label uppercase tracking-widest w-8">CRM</span>
+              <span className="text-heading font-headline font-bold text-sm leading-none">
                 {CRM.replace("CRM/MT ", "")}
               </span>
-              <span className="text-white/30 text-[9px] font-label uppercase">MT</span>
+              <span className="text-body text-[9px] font-label uppercase">MT</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-white/20 text-[9px] font-label uppercase tracking-widest w-8">RQE</span>
-              <span className="text-[#7FB3E8] font-headline font-semibold text-sm leading-none">
+              <span className="text-body text-[9px] font-label uppercase tracking-widest w-8">RQE</span>
+              <span className="text-accent font-headline font-semibold text-sm leading-none">
                 {RQE.replace("RQE ", "")}
               </span>
             </div>
           </div>
 
-          <div className="h-px bg-white/[0.07]" />
+          <div className="h-px bg-subtle" />
 
-          <p className="text-white/35 text-[10px] font-label leading-snug">
+          <p className="text-body text-[10px] font-label leading-snug">
             Nutrologia · Medicina do Esporte
           </p>
         </div>
@@ -103,18 +101,18 @@ export default function Hero() {
           </p>
 
           {/* Overline */}
-          <p className="font-label text-[11px] font-bold uppercase tracking-[0.22em] text-[#7FB3E8]">
+          <p className="font-label text-[11px] font-bold uppercase tracking-[0.22em] text-accent">
             Nutrólogo em Cuiabá
           </p>
 
           {/* Headline principal */}
-          <h1 className="text-[1.3rem] sm:text-[1.85rem] lg:text-[2.1rem] font-headline font-extrabold text-white leading-[1.15] tracking-tight">
-            <span className="text-[#7FB3E8]">Alcance a saúde plena</span>{" "}
+          <h1 className="text-[1.3rem] sm:text-[1.85rem] lg:text-[2.1rem] font-headline font-bold text-heading leading-[1.15] tracking-tight">
+            <span className="text-accent">Alcance a saúde plena</span>{" "}
             e Transforme Seu Corpo com Acompanhamento Médico Especializado
           </h1>
 
           {/* Subtítulo */}
-          <p className="text-sm sm:text-base lg:text-[16px] font-body text-white/80 leading-relaxed">
+          <p className="text-[14px] sm:text-[16px] font-body leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Especialista certificado com abordagem médica completa e personalizada para resultados duradouros.
           </p>
 

@@ -63,10 +63,170 @@
   --color-outline: #6B7280;
   --color-outline-variant: #CBD5E0;
 
-  /* Font variables */
-  --font-headline: var(--font-manrope);
-  --font-body: var(--font-inter);
-  --font-label: var(--font-inter);
+  /* Font variables — sistema Inter único e refinado */
+  --font-headline: var(--font-inter), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-label: var(--font-inter), system-ui, sans-serif;
+
+  /* ─── Design System Tokens (dark-first) ─────────────────── */
+  /* Rampa de elevação navy coesa: base → surface → elevated.   */
+  /* Cada passo é claramente perceptível para dar profundidade. */
+  --color-bg-base: #0A0E1A;       /* fundo de seção (nível 0)   */
+  --color-bg-surface: #141E32;    /* cards (nível +1)            */
+  --color-bg-elevated: #1F2C47;   /* hover / destaque (nível +2) */
+  --color-border-subtle: #283651; /* borda visível mas elegante  */
+  --color-border-muted: #3A4D72;  /* borda de ênfase             */
+  --color-text-primary: #EAEEF7;  /* headings — branco-gelo nítido */
+  --color-text-secondary: #A7BAD6;/* corpo — legível e calmo     */
+  --color-text-accent: #D9E6FC;   /* acento suave — labels/ênfase */
+  --color-text-muted: #6F88AB;    /* texto terciário             */
+  --color-cta-bg: #4532EA;        /* CTA / detalhe — índigo vivo  */
+  --color-cta-text: #F4F8FF;
+
+  /* Glass card */
+  --glass-card-bg: rgba(255, 255, 255, 0.55);
+  --glass-card-border-color: rgba(255, 255, 255, 0.50);
+}
+
+/* ─── Light Theme override (nested, para blog) ───────────── */
+[data-theme="light"] {
+  --glass-card-bg: rgba(255, 255, 255, 0.55);
+  --glass-card-border-color: rgba(255, 255, 255, 0.50);
+
+  --color-primary: #0D1B4B;
+  --color-primary-container: #1A3F8F;
+  --color-primary-fixed: #E8EDF4;
+  --color-primary-fixed-dim: #C8D4E8;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #7FA8D4;
+  --color-on-primary-fixed: #0D1B4B;
+  --color-on-primary-fixed-variant: #2563C2;
+
+  --color-secondary: #164ea3;
+  --color-secondary-container: #227cc5;
+  --color-secondary-fixed: #DCFCE7;
+  --color-secondary-fixed-dim: #86EFAC;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #14532D;
+  --color-on-secondary-fixed: #052E16;
+  --color-on-secondary-fixed-variant: #166534;
+
+  --color-tertiary: #1A3F8F;
+  --color-tertiary-container: #2563C2;
+  --color-tertiary-fixed: #EEF2F7;
+  --color-tertiary-fixed-dim: #BFD0E8;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #60A5FA;
+  --color-on-tertiary-fixed: #0D1B4B;
+  --color-on-tertiary-fixed-variant: #1A3F8F;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --color-surface-dim: #D1D8E2;
+  --color-background: #F0F3F7;
+  --color-surface: #F0F3F7;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #EEF2F7;
+  --color-surface-container: #E8EDF4;
+  --color-surface-container-high: #DDE4EE;
+  --color-surface-container-highest: #D2DCE9;
+  --color-surface-bright: #F8F9FA;
+  --color-surface-tint: #2563C2;
+  --color-on-background: #1C1C2E;
+  --color-on-surface: #1C1C2E;
+  --color-on-surface-variant: #4A5568;
+  --color-inverse-surface: #1C1C2E;
+  --color-inverse-on-surface: #EEF2F7;
+  --color-inverse-primary: #C8D4E8;
+
+  --color-outline: #6B7280;
+  --color-outline-variant: #CBD5E0;
+
+  --color-bg-base: #F0F3F7;
+  --color-bg-surface: #ffffff;
+  --color-bg-elevated: #EEF2F7;
+  --color-border-subtle: #CBD5E0;
+  --color-border-muted: #9BAAB8;
+  --color-text-primary: #1C1C2E;
+  --color-text-secondary: #4A5568;
+  --color-text-accent: #1A3F8F;
+  --color-text-muted: #6B7280;
+  --color-cta-bg: #0D1B4B;
+  --color-cta-text: #ffffff;
+
+  --shadow-editorial: 0 12px 40px -12px rgba(25, 28, 29, 0.04);
+  --shadow-glass: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Dark Theme ─────────────────────────────────────────── */
+[data-theme="dark"] {
+  --glass-card-bg: rgba(31, 44, 71, 0.88);
+  --glass-card-border-color: rgba(127, 179, 232, 0.22);
+
+  /* Primary — Índigo elétrico (preenchimentos, CTAs, detalhes) */
+  --color-primary: #4532EA;
+  --color-primary-container: #1A1450;
+  --color-primary-fixed: #241C66;
+  --color-primary-fixed-dim: #1A1450;
+  --color-on-primary: #F4F8FF;
+  --color-on-primary-container: #D9E6FC;
+  --color-on-primary-fixed: #D9E6FC;
+  --color-on-primary-fixed-variant: #BFD0F5;
+
+  /* Secondary — Azul suave para ênfase / ícones */
+  --color-secondary: #D9E6FC;
+  --color-secondary-container: #241C66;
+  --color-secondary-fixed: #0F1E3D;
+  --color-secondary-fixed-dim: #1A2F59;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #C8DCF0;
+  --color-on-secondary-fixed: #E8F2FF;
+  --color-on-secondary-fixed-variant: #93C5FD;
+
+  /* Tertiary */
+  --color-tertiary: #60A5FA;
+  --color-tertiary-container: #1E40AF;
+  --color-tertiary-fixed: #0F2348;
+  --color-tertiary-fixed-dim: #1A3158;
+  --color-on-tertiary: #0A1628;
+  --color-on-tertiary-container: #C8DCF0;
+  --color-on-tertiary-fixed: #D4E8FF;
+  --color-on-tertiary-fixed-variant: #7EB5E8;
+
+  /* Error */
+  --color-error: #FF8A80;
+  --color-error-container: #93000a;
+  --color-on-error: #06122B;
+  --color-on-error-container: #ffdad6;
+
+  /* Surfaces — rampa navy monotônica (escuro → claro = +elevação) */
+  --color-surface-dim: #070A14;             /* mais fundo           */
+  --color-background: #0A0E1A;              /* fundo de página/seção */
+  --color-surface: #0C1322;                /* seções "surface"      */
+  --color-surface-container-lowest: #0E1626;
+  --color-surface-container-low: #121B2E;
+  --color-surface-container: #141E32;       /* FAQ / amenities       */
+  --color-surface-container-high: #1B2740;  /* cards de conteúdo     */
+  --color-surface-container-highest: #243352;
+  --color-surface-bright: #1F2C47;
+  --color-surface-tint: #4532EA;
+  --color-on-background: #EAEEF7;
+  --color-on-surface: #EAEEF7;
+  --color-on-surface-variant: #A7BAD6;
+  --color-inverse-surface: #EAEEF7;
+  --color-inverse-on-surface: #0A0E1A;
+  --color-inverse-primary: #0D1B4B;
+
+  /* Outline */
+  --color-outline: #51708F;
+  --color-outline-variant: #36486A;
+
+  /* Shadows — mais fortes no dark */
+  --shadow-editorial: 0 12px 40px -12px rgba(0, 0, 0, 0.7);
+  --shadow-glass: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
 
 @theme inline {
@@ -128,6 +288,22 @@
   --font-body: var(--font-body);
   --font-label: var(--font-label);
 
+  /* ─── Design System Token Aliases ───────────────────────── */
+  /* bg-surface-dim serves as the base layer color — use bg-[var(--color-bg-base)] if needed */
+  --color-bg-surface: var(--color-bg-surface);
+  --color-elevated: var(--color-bg-elevated);
+  /* border-subtle, border-subtle-muted → border utilities */
+  --color-subtle: var(--color-border-subtle);
+  --color-subtle-muted: var(--color-border-muted);
+  /* text-heading, text-body, text-accent, text-muted */
+  --color-heading: var(--color-text-primary);
+  --color-body: var(--color-text-secondary);
+  --color-accent: var(--color-text-accent);
+  --color-muted: var(--color-text-muted);
+  /* CTA tokens */
+  --color-cta-bg: var(--color-cta-bg);
+  --color-cta-text: var(--color-cta-text);
+
   /* Border radius */
   --radius: 0.25rem;
   --radius-lg: 0.5rem;
@@ -152,6 +328,12 @@
 .glass-nav {
   background-color: rgba(248, 249, 250, 0.7);
   backdrop-filter: blur(24px);
+}
+
+[data-theme="dark"] .glass-nav {
+  background-color: rgba(10, 14, 26, 0.85);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(127, 179, 232, 0.10);
 }
 
 /* Material symbols font */
@@ -241,4 +423,16 @@ html.lenis body {
 .prose tr:hover td {
   background-color: var(--color-primary-fixed);
   transition: background-color 0.2s ease;
+}
+
+[data-theme="dark"] .prose td {
+  background-color: var(--color-surface-container);
+}
+
+[data-theme="dark"] .prose tr:nth-child(even) td {
+  background-color: var(--color-surface-container-high);
+}
+
+[data-theme="dark"] .prose tr:hover td {
+  background-color: var(--color-surface-container-highest);
 }

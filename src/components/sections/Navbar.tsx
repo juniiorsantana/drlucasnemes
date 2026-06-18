@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { NAV_LINKS, WHATSAPP_URL, CRM } from "@/lib/constants";
+import { NAV_LINKS, WHATSAPP_URL, CRM, THEME } from "@/lib/constants";
 import { trackWhatsAppConversion } from "@/lib/analytics";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
         <div className="flex items-center gap-2">
           <Image
-            src={isScrolled ? "/logo-blue.svg" : "/logo_light.svg"}
+            src={isScrolled ? (THEME === "dark" ? "/logo_light.svg" : "/logo-blue.svg") : "/logo_light.svg"}
             alt="Dr. Lucas Nemes"
             width={72}
             height={24}
@@ -71,7 +71,7 @@ export default function Navbar() {
           </Button>
           <button
             className={`md:hidden transition-colors duration-300 ${
-              isScrolled ? "text-primary" : "text-white"
+              isScrolled ? "text-heading" : "text-white"
             }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >

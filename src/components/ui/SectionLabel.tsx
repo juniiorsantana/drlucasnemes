@@ -9,8 +9,8 @@ export default function SectionLabel({
 }: SectionLabelProps) {
   const variantStyles =
     variant === "primary"
-      ? "bg-primary-fixed text-on-primary-fixed"
-      : "bg-secondary-container text-on-secondary-container";
+      ? "bg-elevated text-accent border border-subtle"
+      : "bg-elevated text-body border border-subtle";
 
   return (
     <div

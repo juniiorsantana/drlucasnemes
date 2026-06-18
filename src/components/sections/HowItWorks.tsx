@@ -60,8 +60,8 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-16 lg:mb-24"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary max-w-4xl mx-auto leading-tight font-headline">
-            Entenda como potencializamos sua saúde com precisão, tecnologia e <span className="italic font-light text-secondary">cuidado personalizado</span>.
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-heading max-w-4xl mx-auto leading-tight tracking-tight font-headline">
+            Entenda como potencializamos sua saúde com precisão, tecnologia e <span className="italic font-normal text-accent">cuidado personalizado</span>.
           </h2>
         </motion.div>
 
@@ -71,14 +71,14 @@ export default function HowItWorks() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 mb-8"
+            className="bg-surface-container-high rounded-[2rem] overflow-hidden shadow-sm border border-outline-variant/30 mb-8"
           >
             <div className="grid lg:grid-cols-2">
               <div className="p-8 lg:p-16 flex flex-col justify-center">
                 <span className="text-xs font-bold uppercase tracking-widest text-secondary mb-4 block">
                   {mainCard.badge}
                 </span>
-                <h3 className="text-2xl lg:text-4xl font-bold text-primary mb-6">
+                <h3 className="text-2xl lg:text-4xl font-semibold text-heading mb-6">
                   {mainCard.title}
                 </h3>
                 <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
@@ -87,8 +87,8 @@ export default function HowItWorks() {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {mainCard.bullets.map((bullet, idx) => (
                     <li key={idx} className="flex items-center gap-3 text-on-surface-variant">
-                      <div className="bg-green-100 p-1 rounded-full">
-                        <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
+                      <div className="bg-emerald-500/10 p-1 rounded-full">
+                        <Check className="w-4 h-4 text-emerald-500" strokeWidth={3} />
                       </div>
                       <span className="font-medium">{bullet}</span>
                     </li>
@@ -115,7 +115,7 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: index === 0 ? 0 : 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 flex flex-col"
+              className="bg-surface-container-high rounded-[2rem] overflow-hidden shadow-sm border border-outline-variant/30 flex flex-col"
             >
               <div className="h-64 relative">
                 <img 
@@ -128,7 +128,7 @@ export default function HowItWorks() {
                 <span className="text-xs font-bold uppercase tracking-widest text-secondary mb-4 block">
                   {card.badge}
                 </span>
-                <h3 className="text-2xl lg:text-3xl font-bold text-primary mb-6">
+                <h3 className="text-2xl lg:text-3xl font-semibold text-heading mb-6">
                   {card.title}
                 </h3>
                 <p className="text-on-surface-variant text-base leading-relaxed mb-8">
@@ -137,8 +137,8 @@ export default function HowItWorks() {
                 <ul className="space-y-4">
                   {card.bullets.map((bullet, idx) => (
                     <li key={idx} className="flex items-center gap-3 text-on-surface-variant">
-                      <div className="bg-green-100 p-1 rounded-full shrink-0">
-                        <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
+                      <div className="bg-emerald-500/10 p-1 rounded-full shrink-0">
+                        <Check className="w-4 h-4 text-emerald-500" strokeWidth={3} />
                       </div>
                       <span className="font-medium">{bullet}</span>
                     </li>
