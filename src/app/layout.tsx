@@ -122,6 +122,12 @@ export default function RootLayout({
             gtag('config', 'AW-11248666884');
           `}
         </Script>
+        {/* MajorHub Tracker */}
+        <Script
+          src="https://tracker.majorhub.com.br/tracker.js"
+          data-token="07ed9457-6ea1-4cc1-b364-80ebab3bab65"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
