@@ -29,6 +29,7 @@ const MAPS_URL =
 const WAZE_URL =
   "https://waze.com/ul?q=R.+das+Beg%C3%B4nias,+615,+Jardim+Cuiab%C3%A1,+Cuiab%C3%A1,+MT&navigate=yes";
 const INSTAGRAM_URL = "https://instagram.com/drlucasnemes";
+const EBOOK_URL = "https://ebook.drlucasnemes.com.br";
 
 const specialties = [
   "Emagrecimento Saudável",
@@ -90,6 +91,25 @@ export default function BioPage() {
             <div className="flex-1">
               <p className="font-bold text-sm leading-tight text-[#0D1B4B]">Agendar Consulta</p>
               <p className="text-[#6B7280] text-xs mt-0.5">Resposta rápida via WhatsApp</p>
+            </div>
+            <span className="material-symbols-outlined text-lg opacity-40 shrink-0">chevron_right</span>
+          </a>
+
+          {/* Ebook — destaque full-width */}
+          <a
+            href={EBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="col-span-2 flex items-center gap-4 px-5 py-4 rounded-2xl bg-gradient-to-br from-[#0D1B4B] to-[#1A3F8F] text-white shadow-[0_4px_16px_rgba(13,27,75,0.2)] hover:shadow-[0_8px_28px_rgba(13,27,75,0.35)] hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+          >
+            <div className="w-10 h-10 shrink-0 flex items-center justify-center">
+              <span className="material-symbols-outlined text-[32px] text-white">
+                menu_book
+              </span>
+            </div>
+            <div className="flex-1">
+              <p className="font-bold text-sm leading-tight">Guia de Dietoterapia — 47 Receitas Funcionais</p>
+              <p className="text-white/60 text-xs mt-0.5">Adquira agora</p>
             </div>
             <span className="material-symbols-outlined text-lg opacity-40 shrink-0">chevron_right</span>
           </a>
