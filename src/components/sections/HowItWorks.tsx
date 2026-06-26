@@ -28,7 +28,7 @@ const HOW_IT_WORKS = [
       "Otimizar o metabolismo",
       "Controle de peso"
     ],
-    image: "/calendario.jpg",
+    image: "/Saude_Soroterapia-terapias-injetaveis.webp",
   },
   {
     type: "grid",
@@ -41,7 +41,7 @@ const HOW_IT_WORKS = [
       "Estabilidade no controle de peso",
       "Bem-estar geral"
     ],
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=800", // Gym fallback
+    image: "/reposicao-hormonal.avif",
   }
 ];
 

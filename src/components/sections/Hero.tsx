@@ -86,7 +86,7 @@ export default function Hero() {
           <div className="h-px bg-subtle" />
 
           <p className="text-body text-[10px] font-label leading-snug">
-            Nutrologia · Medicina do Esporte
+            Nutrologia Esportiva
           </p>
         </div>
       </div>
@@ -149,8 +149,8 @@ export default function Hero() {
               }}
             >
               <svg viewBox="0 0 16 16" fill="none" className="w-3 h-3 shrink-0 text-[#7FB3E8]">
-                <path d="M8 1l1.8 2.2 2.7-.7-.7 2.7L14 7l-2.2 1 .7 2.7-2.7-.7L8 12.3 6.2 10l-2.7.7.7-2.7L2 7l2.2-1.8-.7-2.7 2.7.7L8 1z" fill="currentColor" opacity="0.3"/>
-                <path d="M6 8l1.5 1.5 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8 1l1.8 2.2 2.7-.7-.7 2.7L14 7l-2.2 1 .7 2.7-2.7-.7L8 12.3 6.2 10l-2.7.7.7-2.7L2 7l2.2-1.8-.7-2.7 2.7.7L8 1z" fill="currentColor" opacity="0.3" />
+                <path d="M6 8l1.5 1.5 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <span className="font-label text-[10px] font-bold uppercase tracking-[0.13em] text-white/85 whitespace-nowrap">
                 Dr. Lucas Nemes

@@ -81,7 +81,7 @@ export default function TechnologyStack() {
                   mb-5 lg:mb-20 rounded-2xl lg:rounded-3xl overflow-hidden
                   border transition-all duration-300
                   ${card.highlight
-                    ? "bg-primary text-white border-transparent shadow-2xl"
+                    ? "bg-[#1a2e7d] text-white border-transparent shadow-2xl"
                     : "bg-surface-container-high text-heading border-outline-variant/30 shadow-lg"
                   }
                 `}
