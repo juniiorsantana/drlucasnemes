@@ -36,10 +36,11 @@ const HOW_IT_WORKS = [
     title: "Implantes Hormonais",
     description: "Liberação contínua e controlada de hormônios. Adaptada às necessidades do seu corpo. Indicado para:",
     bullets: [
-      "Ganho de massa muscular",
-      "Melhora da disposição e libido",
-      "Estabilidade no controle de peso",
-      "Bem-estar geral"
+      "Mulheres na pós-menopausa",
+      "Mulheres com endometriose",
+      "Mulheres com necessidade de bloqueio de ciclo menstrual",
+      "Homens com hipogonadismo",
+      "Tratamento de sarcopenia severa"
     ],
     image: "/reposicao-hormonal.avif",
   }
