@@ -42,7 +42,7 @@ const HOW_IT_WORKS = [
       "Homens com hipogonadismo",
       "Tratamento de sarcopenia severa"
     ],
-    image: "/reposicao-hormonal.avif",
+    image: "/reposicao-hormonal-implante.jpg",
   }
 ];
 

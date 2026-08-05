@@ -183,7 +183,7 @@ export default function GuiaPosBariatricoTSL() {
             <p>
               O seu estômago mudou. O modo como o seu corpo absorve nutrientes
               mudou. O que funcionava antes — aquela salada, aquele iogurte,
-              aquele prato "saudável" — pode não ser suficiente para o que o
+              aquele prato {"\"saudável\""} — pode não ser suficiente para o que o
               seu metabolismo precisa agora.
             </p>
 
@@ -194,7 +194,7 @@ export default function GuiaPosBariatricoTSL() {
 
             <div className="p-6 rounded-2xl bg-surface-container border border-outline/10">
               <p className="text-heading font-semibold mb-4 text-[15px]">
-                Ele sacrifica o que considera "dispensável" para proteger o que
+                Ele sacrifica o que considera {"\"dispensável\""} para proteger o que
                 considera vital.
               </p>
               <div className="space-y-2">
@@ -215,7 +215,7 @@ export default function GuiaPosBariatricoTSL() {
 
             <p>
               Não é frescura. Não é falta de força de vontade. Não é porque
-              "seu organismo é difícil".
+              {" \"seu organismo é difícil\""}.
             </p>
 
             <p className="text-heading font-semibold text-lg">
@@ -260,7 +260,7 @@ export default function GuiaPosBariatricoTSL() {
             </p>
 
             <p>
-              Comer "saudável" não basta. Você precisa comer{" "}
+              Comer &quot;saudável&quot; não basta. Você precisa comer{" "}
               <strong className="text-heading">funcionalmente</strong> — de um
               jeito que faça sentido para o seu novo metabolismo.
             </p>

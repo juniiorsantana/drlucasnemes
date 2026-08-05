@@ -18,6 +18,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/guia-completo-para-hipertrofia-pos-bariatrica",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/blog/guia-completo-para-hipertrofia-pos-bariatrica",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
