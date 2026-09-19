@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import {
   DOCTOR_NAME,
   DOCTOR_SPECIALTY,
   CRM,
   RQE,
-  WHATSAPP_URL,
   CLINIC_ADDRESS,
   CLINIC_CITY,
   CLINIC_STATE,
@@ -77,10 +77,8 @@ export default function BioPage() {
         <div className="w-full grid grid-cols-2 gap-3">
 
           {/* Agendar — destaque full-width (Sutil) */}
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            origem="bio"
             className="col-span-2 flex items-center gap-4 px-5 py-4 rounded-2xl bg-white border border-[#CBD5E0] text-[#0D1B4B] shadow-sm hover:border-[#164ea3] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
           >
             <div className="w-10 h-10 shrink-0 relative flex items-center justify-center">
@@ -93,7 +91,7 @@ export default function BioPage() {
               <p className="text-[#6B7280] text-xs mt-0.5">Resposta rápida via WhatsApp</p>
             </div>
             <span className="material-symbols-outlined text-lg opacity-40 shrink-0">chevron_right</span>
-          </a>
+          </WhatsAppLink>
 
           {/* Ebook — destaque full-width */}
           <a

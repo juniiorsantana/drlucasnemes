@@ -1,9 +1,8 @@
 "use client";
 
-import { WHATSAPP_URL, CRM, RQE } from "@/lib/constants";
-import { trackWhatsAppConversion } from "@/lib/analytics";
+import { CRM, RQE } from "@/lib/constants";
 import Button from "@/components/ui/Button";
-import Image from "next/image";
+import { getImageProps } from "next/image";
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0">
@@ -14,29 +13,35 @@ const WhatsAppIcon = () => (
 
 
 export default function Hero() {
+  const imageOptions = {
+    alt: "Dr. Lucas Nemes — Nutrólogo em Cuiabá",
+    fill: true,
+    sizes: "100vw",
+    loading: "eager" as const,
+    fetchPriority: "high" as const,
+  };
+  const { props: mobileImage } = getImageProps({
+    ...imageOptions,
+    src: "/bgheroMobile.webp",
+  });
+  const { props: desktopImage } = getImageProps({
+    ...imageOptions,
+    src: "/bghero.avif",
+  });
+
   return (
-    <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden">
+    <section className="relative min-h-[100svh] lg:min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden bg-[#080f2a]">
 
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        {/* Mobile */}
-        <Image
-          src="/bgheroMobile.avif"
-          alt="Dr. Lucas Nemes — Nutrólogo em Cuiabá"
-          fill
-          priority
-          quality={90}
-          className="object-cover object-top lg:hidden"
-        />
-        {/* Desktop */}
-        <Image
-          src="/bghero.avif"
-          alt="Dr. Lucas Nemes — Nutrólogo em Cuiabá"
-          fill
-          priority
-          quality={90}
-          className="object-cover object-center hidden lg:block"
-        />
+        <picture>
+          <source media="(min-width: 1024px)" srcSet={desktopImage.srcSet} sizes="100vw" />
+          <img
+            {...mobileImage}
+            alt={imageOptions.alt}
+            className="object-cover object-top lg:object-center"
+          />
+        </picture>
         {/* Mobile: gradiente de baixo para cima */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#080f2a]/90 via-[#080f2a]/55 to-[#080f2a]/10 lg:hidden" />
         {/* Desktop: gradiente começa na direita e some antes da foto */}
@@ -92,8 +97,8 @@ export default function Hero() {
       </div>
 
       {/* Conteúdo */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-16 lg:pb-0 pt-20 lg:pt-20 flex flex-col lg:flex-row lg:justify-end items-center lg:items-center text-center lg:text-left">
-        <div className="w-full max-w-[420px] lg:mr-[13%] space-y-5 animate-fade-up">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 lg:px-8 pb-8 lg:pb-0 pt-24 lg:pt-20 flex flex-col lg:flex-row lg:justify-end items-center lg:items-center text-center lg:text-left">
+        <div className="w-full max-w-[420px] lg:mr-[13%] space-y-3 lg:space-y-5 animate-fade-up">
 
           {/* Micro-texto (subiu) */}
           <p className="text-white/40 text-[11px] font-label tracking-wide">
@@ -126,11 +131,10 @@ export default function Hero() {
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
             <Button
-              href={WHATSAPP_URL}
+              whatsapp={{ origem: "hero" }}
               variant="whatsapp"
               size="lg"
               className="w-full sm:w-auto"
-              onLinkClick={trackWhatsAppConversion}
               icon={<WhatsAppIcon />}
             >
               Agende Sua Consulta

@@ -9,14 +9,16 @@ import {
   CLINIC_CITY,
   CLINIC_STATE,
   CLINIC_PHONE,
+  CLINIC_PHONE_FORMATTED,
   CLINIC_HOURS,
   CURRENT_YEAR,
   DEVELOPER_CREDIT,
   NAV_LINKS,
   SOCIAL_LINKS,
 } from "@/lib/constants";
-import { trackWhatsAppConversion } from "@/lib/analytics";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -63,7 +65,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="font-label font-bold text-white">Telefone</p>
-              <a href={`tel:${CLINIC_PHONE}`} className="hover:text-white">
+              <a href={`tel:+${CLINIC_PHONE_FORMATTED}`} className="hover:text-white">
                 {CLINIC_PHONE}
               </a>
             </div>
@@ -75,12 +77,21 @@ export default function Footer() {
 
           {/* Social Links */}
           <div className="flex gap-4">
-            {SOCIAL_LINKS.map((link) => (
+            {SOCIAL_LINKS.map((link) => link.platform === "whatsapp" ? (
+              <WhatsAppLink
+                key={link.platform}
+                origem="rodape"
+                title={link.label}
+                aria-label={link.label}
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-on-primary-container hover:bg-white/20 hover:text-white transition-colors"
+              >
+                <span className="material-symbols-outlined" aria-hidden="true">{link.icon}</span>
+              </WhatsAppLink>
+            ) : (
               <a
                 key={link.platform}
                 href={link.url}
                 title={link.label}
-                onClick={link.platform === 'whatsapp' ? trackWhatsAppConversion : undefined}
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-on-primary-container hover:bg-white/20 hover:text-white transition-colors"
               >
                 <span className="material-symbols-outlined">{link.icon}</span>
@@ -95,6 +106,9 @@ export default function Footer() {
             © {CURRENT_YEAR} {DOCTOR_NAME} — Nutrologia & Performance. Todos os
             direitos reservados.
           </p>
+          <Link href="/politica-de-privacidade" className="hover:text-white transition-colors">
+            Política de Privacidade
+          </Link>
           <p>Desenvolvido por {DEVELOPER_CREDIT}</p>
         </div>
       </div>

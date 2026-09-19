@@ -9,6 +9,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 1,
     },
-    // Add more routes here as they are created
+    {
+      url: `${SITE_URL}/politica-de-privacidade`,
+      lastModified: new Date('2026-09-18'),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ]
 }

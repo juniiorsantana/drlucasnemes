@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { DOCTOR_NAME, CRM, RQE, WHATSAPP_URL } from "@/lib/constants";
+import { DOCTOR_NAME, CRM, RQE } from "@/lib/constants";
 import Button from "@/components/ui/Button";
 import SectionLabel from "@/components/ui/SectionLabel";
 
@@ -103,7 +103,7 @@ export default function About() {
               whileTap={{ scale: 0.97 }}
               className="inline-block"
             >
-              <Button href={WHATSAPP_URL} variant="primary" size="lg">
+              <Button whatsapp={{ origem: "sobre" }} variant="primary" size="lg">
                 Agende Uma Consulta Agora
               </Button>
             </motion.div>

@@ -1,16 +1,16 @@
 "use client";
 
-import { trackWhatsAppConversion } from "@/lib/analytics";
+import { WhatsAppLink, type WhatsAppLinkProps } from "@/components/ui/WhatsAppLink";
 
 interface BlogCTAProps {
-  message?: string;
+  mensagem?: string;
+  servico?: WhatsAppLinkProps["servico"];
 }
 
 export default function BlogCTA({
-  message = 'Olá%20Dr.%20Lucas!%20Vim%20pelo%20blog%20e%20gostaria%20de%20agendar%20uma%20consulta.',
+  mensagem = "Olá, Dr. Lucas! Vim pelo blog e gostaria de agendar uma consulta.",
+  servico = "geral",
 }: BlogCTAProps) {
-  const waUrl = `https://wa.me/556596971216?text=${message}`;
-
   return (
     <div className="not-prose my-10 rounded-2xl overflow-hidden border border-outline/10 shadow-editorial">
       {/* Top accent bar */}
@@ -39,11 +39,10 @@ export default function BlogCTA({
           </div>
 
           {/* Button */}
-          <a
-            href={waUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={trackWhatsAppConversion}
+          <WhatsAppLink
+            origem="blog"
+            servico={servico}
+            mensagem={mensagem}
             className="flex-shrink-0 inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_4px_20px_rgba(37,211,102,0.35)] transition-all duration-300 hover:shadow-[0_6px_28px_rgba(37,211,102,0.55)] hover:-translate-y-0.5 active:scale-95 whitespace-nowrap"
           >
             <svg className="w-5 h-5 fill-white flex-shrink-0" viewBox="0 0 24 24">
@@ -51,7 +50,7 @@ export default function BlogCTA({
               <path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.55 4.107 1.512 5.84L.057 23.943l6.305-1.455A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.005-1.373l-.36-.213-3.732.861.882-3.622-.233-.373A9.818 9.818 0 1112 21.818z" />
             </svg>
             Agendar pelo WhatsApp
-          </a>
+          </WhatsAppLink>
         </div>
       </div>
     </div>

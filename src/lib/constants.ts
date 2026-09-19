@@ -4,20 +4,20 @@
  */
 
 // WhatsApp Integration
-export const WHATSAPP_NUMBER = "556596971216";
+export const WHATSAPP_NUMBER = "5565996971216";
 export const WHATSAPP_MESSAGE =
-  "Olá, Dr. Lucas! Gostaria de agendar uma consulta.";
+  "Olá, Dr. Lucas! Gostaria de agendar uma avaliação.";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 // Clinic Information
-export const CLINIC_NAME = "Clínica HiperbáricaMT";
-export const CLINIC_ADDRESS = "Gastro MT (Anexo HMT) R. das Begônias, 615 (Anexo B), Jardim Cuiabá";
+export const CLINIC_NAME = "Gastro MT — Anexo B (HMT)";
+export const CLINIC_ADDRESS = `${CLINIC_NAME}, R. das Begônias, 615, Jardim Cuiabá`;
 export const CLINIC_CITY = "Cuiabá";
 export const CLINIC_STATE = "MT";
 export const CLINIC_POSTAL_CODE = "78043-112";
 export const CLINIC_HOURS = "Segunda a Sexta, 07:00 às 19:00";
-export const CLINIC_PHONE = "(65) 9697-1216";
-export const CLINIC_PHONE_FORMATTED = "556596971216";
+export const CLINIC_PHONE = "(65) 99697-1216";
+export const CLINIC_PHONE_FORMATTED = "5565996971216";
 
 // Doctor Credentials
 export const DOCTOR_NAME = "Dr. Lucas Nemes";
@@ -197,7 +197,7 @@ export const SOCIAL_LINKS = [
 // Footer Links
 export const FOOTER_LINKS = [
   { label: "Termos de Uso", href: "#" },
-  { label: "Política de Privacidade", href: "#" },
+  { label: "Política de Privacidade", href: "/politica-de-privacidade" },
   { label: "Contato", href: "#" },
 ] as const;
 

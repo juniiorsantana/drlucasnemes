@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import { DOCTOR_NAME, CLINIC_NAME, SITE_URL, SEO_KEYWORDS } from "@/lib/constants";
 
@@ -109,25 +109,7 @@ export default function RootLayout({
         <SmoothScroll>
           {children}
         </SmoothScroll>
-        {/* Google Ads tag */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-11248666884"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-config" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-11248666884');
-          `}
-        </Script>
-        {/* MajorHub Tracker */}
-        <Script
-          src="https://tracker.majorhub.com.br/tracker.js"
-          data-token="07ed9457-6ea1-4cc1-b364-80ebab3bab65"
-          strategy="afterInteractive"
-        />
+        <GoogleTagManager gtmId="GTM-NP33SDP9" />
       </body>
     </html>
   );

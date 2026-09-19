@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { NAV_LINKS, WHATSAPP_URL, CRM, THEME } from "@/lib/constants";
-import { trackWhatsAppConversion } from "@/lib/analytics";
+import { NAV_LINKS, CRM, THEME } from "@/lib/constants";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 
@@ -61,11 +60,10 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
           <Button
-            href={WHATSAPP_URL}
+            whatsapp={{ origem: "navbar" }}
             variant="primary"
             size="sm"
             className={`hidden md:flex transition-opacity duration-300 ${isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-            onLinkClick={trackWhatsAppConversion}
           >
             Agendar Consulta
           </Button>
@@ -94,7 +92,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button href={WHATSAPP_URL} variant="primary" size="md" onLinkClick={trackWhatsAppConversion}>
+            <Button whatsapp={{ origem: "navbar" }} variant="primary" size="md">
               Agendar Consulta
             </Button>
           </div>

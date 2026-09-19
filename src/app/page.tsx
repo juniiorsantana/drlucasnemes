@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { CRM, RQE, DOCTOR_NAME, CLINIC_ADDRESS, CLINIC_CITY, CLINIC_STATE, CLINIC_PHONE_FORMATTED, SITE_URL } from "@/lib/constants";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
@@ -10,6 +11,12 @@ import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+
+export const metadata: Metadata = {
+  verification: {
+    google: "7QKrurk2gZexxJCvJyHvBEUG7c-e5mTn0vjPPNF-NSM",
+  },
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -30,7 +37,7 @@ const jsonLd = {
   },
   contact: {
     "@type": "ContactPoint",
-    telephone: CLINIC_PHONE_FORMATTED,
+    telephone: `+${CLINIC_PHONE_FORMATTED}`,
     contactType: "Customer Service",
   },
   areaServed: {

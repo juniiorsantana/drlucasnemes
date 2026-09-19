@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { WHATSAPP_URL } from "@/lib/constants";
-import { trackWhatsAppConversion } from "@/lib/analytics";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export default function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -59,16 +58,15 @@ export default function WhatsAppButton() {
 
       // fecha automático no mobile
       setTimeout(() => setIsExpanded(false), 4000);
-    } else {
-      trackWhatsAppConversion();
     }
   };
 
   return (
-    <a
-      href={WHATSAPP_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+    <WhatsAppLink
+      origem="flutuante"
+      aria-label="Agendar avaliação pelo WhatsApp"
+      tabIndex={isVisible ? 0 : -1}
+      aria-hidden={!isVisible}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
@@ -117,6 +115,6 @@ export default function WhatsAppButton() {
           Online agora
         </div>
       </div>
-    </a>
+    </WhatsAppLink>
   );
 }

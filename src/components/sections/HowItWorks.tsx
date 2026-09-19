@@ -2,8 +2,19 @@
 
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
+import { WhatsAppLink, type WhatsAppLinkProps } from "@/components/ui/WhatsAppLink";
 
-const HOW_IT_WORKS = [
+interface ServiceCardData {
+  type: "main" | "grid";
+  badge: string;
+  title: string;
+  description: string;
+  bullets: string[];
+  image: string;
+  whatsapp: Pick<WhatsAppLinkProps, "origem" | "servico" | "mensagem">;
+}
+
+const HOW_IT_WORKS: ServiceCardData[] = [
   {
     type: "main",
     badge: "Serviços",
@@ -16,6 +27,7 @@ const HOW_IT_WORKS = [
       "Controle de peso"
     ],
     image: "/drlucasnemes1.jpg",
+    whatsapp: { origem: "servicos" },
   },
   {
     type: "grid",
@@ -29,6 +41,7 @@ const HOW_IT_WORKS = [
       "Controle de peso"
     ],
     image: "/Saude_Soroterapia-terapias-injetaveis.webp",
+    whatsapp: { origem: "servicos" },
   },
   {
     type: "grid",
@@ -43,6 +56,11 @@ const HOW_IT_WORKS = [
       "Tratamento de sarcopenia severa"
     ],
     image: "/reposicao-hormonal-implante.jpg",
+    whatsapp: {
+      origem: "servicos",
+      servico: "reposicao_hormonal",
+      mensagem: "Olá, Dr. Lucas! Quero uma avaliação sobre reposição hormonal.",
+    },
   }
 ];
 
@@ -95,6 +113,12 @@ export default function HowItWorks() {
                     </li>
                   ))}
                 </ul>
+                <WhatsAppLink
+                  {...mainCard.whatsapp}
+                  className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-accent underline underline-offset-4 hover:text-heading transition-colors"
+                >
+                  Agendar avaliação
+                </WhatsAppLink>
               </div>
               <div className="h-[300px] lg:h-auto relative">
                 <img 
@@ -145,6 +169,12 @@ export default function HowItWorks() {
                     </li>
                   ))}
                 </ul>
+                <WhatsAppLink
+                  {...card.whatsapp}
+                  className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-accent underline underline-offset-4 hover:text-heading transition-colors"
+                >
+                  Agendar avaliação
+                </WhatsAppLink>
               </div>
             </motion.div>
           ))}

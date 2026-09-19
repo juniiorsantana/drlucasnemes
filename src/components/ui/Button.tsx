@@ -1,4 +1,5 @@
 import React from "react";
+import { WhatsAppLink, type WhatsAppLinkProps } from "./WhatsAppLink";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "ghost" | "secondary" | "premium" | "whatsapp";
@@ -7,6 +8,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   icon?: React.ReactNode;
   onLinkClick?: () => void;
+  whatsapp?: Pick<WhatsAppLinkProps, "origem" | "servico" | "mensagem">;
 }
 
 export default function Button({
@@ -16,6 +18,7 @@ export default function Button({
   href,
   icon,
   onLinkClick,
+  whatsapp,
   className = "",
   ...props
 }: ButtonProps) {
@@ -76,6 +79,14 @@ export default function Button({
   );
 
   const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+
+  if (whatsapp) {
+    return (
+      <WhatsAppLink {...whatsapp} className={combinedClassName} onClick={onLinkClick}>
+        {buttonContent}
+      </WhatsAppLink>
+    );
+  }
 
   if (href) {
     return (

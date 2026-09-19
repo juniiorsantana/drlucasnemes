@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WhatsAppLink, type WhatsAppLinkProps } from "@/components/ui/WhatsAppLink";
 
 interface CardData {
   id: number;
@@ -9,11 +9,17 @@ interface CardData {
   description: string;
   imageUrl: string;
   icon: string;
+  whatsapp: Pick<WhatsAppLinkProps, "origem" | "servico" | "mensagem">;
 }
 
 const CARDS: CardData[] = [
   {
     id: 1,
+    whatsapp: {
+      origem: "card_emagrecimento",
+      servico: "emagrecimento",
+      mensagem: "Olá, Dr. Lucas! Quero uma avaliação para emagrecimento.",
+    },
     title: "Emagrecimento Saudável",
     description:
       "Abordagem simples e eficiente para resultados duradouros com saúde e equilíbrio.",
@@ -22,6 +28,7 @@ const CARDS: CardData[] = [
   },
   {
     id: 2,
+    whatsapp: { origem: "card_longevidade" },
     title: "Longevidade e Bem-estar",
     description:
       "Cuidamos do seu corpo e mente para uma vida melhor hoje e no futuro.",
@@ -30,6 +37,7 @@ const CARDS: CardData[] = [
   },
   {
     id: 3,
+    whatsapp: { origem: "card_performance" },
     title: "Alta Performance",
     description:
       "Máximo desempenho através da nutrição de precisão e estratégias personalizadas.",
@@ -70,14 +78,14 @@ function ServiceCard({ card }: { card: CardData }) {
 
         {/* Footer */}
         <div className="flex items-center justify-between pt-2 border-t border-white/10">
-          <a
-            href={WHATSAPP_URL}
+          <WhatsAppLink
+            {...card.whatsapp}
             className="text-white/50 text-sm hover:text-white transition-colors duration-200"
           >
             Saiba mais
-          </a>
-          <a
-            href={WHATSAPP_URL}
+          </WhatsAppLink>
+          <WhatsAppLink
+            {...card.whatsapp}
             aria-label={`Saiba mais sobre ${card.title}`}
             className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white/50 hover:border-white/40 hover:text-white transition-all duration-200"
           >
@@ -96,7 +104,7 @@ function ServiceCard({ card }: { card: CardData }) {
                 strokeLinejoin="round"
               />
             </svg>
-          </a>
+          </WhatsAppLink>
         </div>
       </div>
     </div>
