@@ -15,6 +15,9 @@ import WhatsAppButton from "@/components/ui/WhatsAppButton";
 export const metadata: Metadata = {
   verification: {
     google: "7QKrurk2gZexxJCvJyHvBEUG7c-e5mTn0vjPPNF-NSM",
+    other: {
+      "facebook-domain-verification": "du0vn06vpyopcpk9e3sju96bdec4kk",
+    },
   },
 };
 

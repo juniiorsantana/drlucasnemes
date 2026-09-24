@@ -64,9 +64,11 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/dr-lucas-nemes-og.avif`],
   },
   icons: {
-    icon: "/icon-lucasnemes.svg",
-    shortcut: "/icon-lucasnemes.svg",
-    apple: "/icon-lucasnemes.svg",
+    icon: [
+      { url: "/icon-lucasnemes.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
   alternates: {
     canonical: SITE_URL,
