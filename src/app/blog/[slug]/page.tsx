@@ -12,6 +12,7 @@ import ShareButtons from '@/components/blog/ShareButtons';
 import ArticleSidebar from '@/components/blog/ArticleSidebar';
 import Button from '@/components/ui/Button';
 import BlogCTA from '@/components/blog/BlogCTA';
+import { SITE_URL } from '@/lib/constants';
 
 function MdxTable({ children }: { children?: React.ReactNode }) {
   return (
@@ -152,9 +153,13 @@ export async function generateMetadata({
   return {
     title: `${post.frontmatter.title} | Dr. Lucas Nemes`,
     description: post.frontmatter.description,
+    alternates: {
+      canonical: `${SITE_URL}/blog/${slug}`,
+    },
     openGraph: {
       title: post.frontmatter.title,
       description: post.frontmatter.description,
+      url: `${SITE_URL}/blog/${slug}`,
       type: 'article',
       publishedTime: post.frontmatter.date,
       authors: [post.frontmatter.author],

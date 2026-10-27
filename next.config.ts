@@ -22,12 +22,12 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/guia-completo-para-hipertrofia-pos-bariatrica",
-        destination: "/",
+        destination: "/blog/7-deficiencias-nutricionais-pos-bariatrica",
         permanent: true,
       },
       {
         source: "/blog/guia-completo-para-hipertrofia-pos-bariatrica",
-        destination: "/",
+        destination: "/blog/7-deficiencias-nutricionais-pos-bariatrica",
         permanent: true,
       },
     ];

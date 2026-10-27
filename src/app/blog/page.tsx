@@ -8,6 +8,7 @@ import Navbar from '@/components/sections/Navbar';
 import Footer from '@/components/sections/Footer';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 import Button from '@/components/ui/Button';
+import { SITE_URL } from '@/lib/constants';
 
 interface PostFrontmatter {
   title: string;
@@ -51,6 +52,9 @@ async function getPosts(): Promise<Post[]> {
 export const metadata: Metadata = {
   title: 'Blog | Dr. Lucas Nemes',
   description: 'Artigos sobre nutrologia, emagrecimento, performance e saúde preventiva.',
+  alternates: {
+    canonical: `${SITE_URL}/blog`,
+  },
 };
 
 export default async function BlogIndexPage() {

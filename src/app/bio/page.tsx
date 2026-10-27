@@ -16,6 +16,9 @@ import {
 export const metadata: Metadata = {
   title: `${DOCTOR_NAME} — Bio`,
   description: `${DOCTOR_SPECIALTY} em Cuiabá-MT. ${CRM} · ${RQE}. Emagrecimento, Longevidade e Alta Performance.`,
+  alternates: {
+    canonical: `${SITE_URL}/bio`,
+  },
   openGraph: {
     title: `${DOCTOR_NAME} — Bio`,
     description: `${DOCTOR_SPECIALTY} especialista em emagrecimento, longevidade e performance. ${CRM}`,
